@@ -5,6 +5,7 @@ import android.app.Application
 import android.content.Context
 import android.util.Log
 import top.niunaijun.blackbox.BlackBoxCore
+import top.niunaijun.blackboxa.util.LanguageHelper
 
 
 class App : Application() {
@@ -37,22 +38,19 @@ class App : Application() {
                 Log.e("App", "Error in onBeforeMainApplicationAttach: ${e.message}")
             }
 
-            mContext = base!!
+            val ctx = LanguageHelper.applyLanguageBeforeAttach(base ?: return)
+            mContext = ctx
 
             try {
-                AppManager.doAttachBaseContext(base)
+                AppManager.doAttachBaseContext(ctx)
             } catch (e: Exception) {
                 Log.e("App", "Error in doAttachBaseContext: ${e.message}")
             }
 
             try {
-
-                BlackBoxCore.get().onAfterMainApplicationAttach(this, base)
-
+                BlackBoxCore.get().onAfterMainApplicationAttach(this, ctx)
             } catch (e: Exception) {
-
                 Log.e("App", "Error in onAfterMainApplicationAttach: ${e.message}")
-
             }
         } catch (e: Exception) {
             Log.e("App", "Critical error in attachBaseContext: ${e.message}")

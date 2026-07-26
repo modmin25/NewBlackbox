@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BlackBox</string>
+    <string name="app_name">BlackBox Pro</string>
     <string name="choose">Choose</string>
     <string name="choose_app">Choose App</string>
     <string name="installed_app">Installed App</string>
@@ -16,7 +16,7 @@
     <string name="close_fake_location">Disable FakeLocation</string>
     <string name="close_app_fake_location">Disable FakeLocation for %s</string>
     <string name="close_fake_location_success">Disable FakeLocation for %s Successfully</string>
-    <string name="setting">Setting</string>
+    <string name="setting">Settings</string>
     <string name="jump_module">Go to Module Manager</string>
     <string name="module_setting">Module Manager</string>
     <string name="enable_xposed">Enable Xposed Framework</string>
@@ -26,7 +26,7 @@
     <string name="userRemark">User Remark</string>
     <string name="done">Done</string>
     <string name="cancel">Cancel</string>
-    <string name="permission_setting">Setting</string>
+    <string name="permission_setting">Settings</string>
     <string name="no_reminders">No Reminders</string>
     <string name="app_stop">Stop Running</string>
     <string name="app_stop_hint">Do you want to stop %s forcibly?</string>
@@ -37,7 +37,7 @@
     <string name="app_shortcut">Create Shortcut</string>
     <string name="shortcut_name">Shortcut Name</string>
     <string name="try_add_shortcut">Try Added To Desktop</string>
-    <string name="add_shortcut_fail_msg">If the addition fails, please go to system settings and open the permission of "create desktop shortcut" for BlackBox</string>
+    <string name="add_shortcut_fail_msg">If the addition fails, please go to system settings and open the permission of "create desktop shortcut" for BlackBox Pro</string>
     <string name="install_success">Installed Successfully</string>
     <string name="install_fail">Installed Failed: %s</string>
     <string name="install_fail_no_msg">Installed Failed</string>
@@ -67,4 +67,18 @@
     <string name="disable_gms">Disable Service</string>
     <string name="disable_gms_hint">Clear the current Google service environment? Google service data will be cleared.</string>
     <string name="no_gms">Currently, there is no Google service environment on mobile phones.</string>
+    <string name="language_setting">Language</string>
+    <string name="language_setting_summary">Change the app language</string>
+    <string name="theme_setting">Dark Theme</string>
+    <string name="theme_setting_summary">Toggle dark mode appearance</string>
+    <string name="about">About</string>
+    <string name="about_summary">BlackBox Pro - Virtual Engine</string>
+    <string name="version">Version %s</string>
+    <string name="language_system">System Default</string>
+    <string name="language_en">English</string>
+    <string name="language_ar">Arabic</string>
+    <string name="language_es">Spanish</string>
+    <string name="language_fr">French</string>
+    <string name="language_zh_cn">Chinese (Simplified)</string>
+    <string name="language_zh_tw">Chinese (Traditional)</string>
 </resources>

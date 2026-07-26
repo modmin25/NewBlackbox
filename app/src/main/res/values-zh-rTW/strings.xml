@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BlackBox</string>
+    <string name="app_name">BlackBox Pro</string>
     <string name="choose">手動選擇</string>
     <string name="choose_app">選擇應用程序</string>
     <string name="installed_app">已安裝的應用程序</string>
@@ -15,7 +15,7 @@
     <string name="close_fake_location">禁用虛擬位置</string>
     <string name="close_app_fake_location">是否關閉%s的虛擬定位</string>
     <string name="close_fake_location_success">成功禁用%s的虛擬定位</string>
-    <string name="setting">軟件設定</string>
+    <string name="setting">軟體設定</string>
     <string name="jump_module">轉到模塊管理器</string>
     <string name="module_setting">模塊管理器</string>
     <string name="enable_xposed">啟用Xposed框架</string>
@@ -35,8 +35,8 @@
     <string name="app_remove">卸載應用程序</string>
     <string name="app_shortcut">創建快捷方式</string>
     <string name="shortcut_name">快捷方式名稱</string>
-    <string name="try_add_shortcut">嘗試添加到案頭</string>
-    <string name="add_shortcut_fail_msg">如果添加失敗，請轉到系統設置並打開BlackBox的“創建案頭快捷方式”許可權</string>
+    <string name="try_add_shortcut">嘗試添加到桌面</string>
+    <string name="add_shortcut_fail_msg">如果添加失敗，請轉到系統設置並打開BlackBox Pro的"創建桌面快捷方式"許可權</string>
     <string name="install_success">安裝成功</string>
     <string name="install_fail">安裝失敗：%s</string>
     <string name="install_fail_no_msg">安裝失敗</string>
@@ -51,7 +51,7 @@
     <string name="start_fail">發射失敗</string>
     <string name="start_in_outside">在外部啟動模塊</string>
     <string name="restart_module">重新啟動應用程序以應用更改</string>
-    <string name="cannot_create_shortcut">此案頭不支持創建快捷方式</string>
+    <string name="cannot_create_shortcut">此桌面不支持創建快捷方式</string>
     <string name="uninstall_module_toast">請在模塊管理器中卸載xposed模塊</string>
     <string name="other">其他</string>
     <string name="daemon_enable">守護進程</string>
@@ -62,4 +62,22 @@
     <string name="disable_gms">禁用服務</string>
     <string name="disable_gms_hint">清除當前的穀歌服務環境？ 穀歌服務數據將被清除。</string>
     <string name="no_gms">現時，手機上沒有穀歌服務環境。</string>
+    <string name="use_vpn_network">使用VPN網絡</string>
+    <string name="use_vpn_network_summary">通過VPN路由沙盒應用的流量（可能改善網絡訪問）</string>
+    <string name="disable_flag_secure">禁用Flag Secure</string>
+    <string name="disable_flag_secure_summary">允許在應用中截屏和錄屏</string>
+    <string name="language_setting">語言</string>
+    <string name="language_setting_summary">更改應用語言</string>
+    <string name="theme_setting">深色主題</string>
+    <string name="theme_setting_summary">切換深色模式外觀</string>
+    <string name="about">關於</string>
+    <string name="about_summary">BlackBox Pro - 虛擬引擎</string>
+    <string name="version">版本 %s</string>
+    <string name="language_system">跟隨系統</string>
+    <string name="language_en">英語</string>
+    <string name="language_ar">阿拉伯語</string>
+    <string name="language_es">西班牙語</string>
+    <string name="language_fr">法語</string>
+    <string name="language_zh_cn">簡體中文</string>
+    <string name="language_zh_tw">繁體中文</string>
 </resources>

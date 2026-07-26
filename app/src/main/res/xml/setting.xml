@@ -1,40 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <PreferenceCategory app:title="@string/setting">
 
+        <ListPreference
+            app:key="app_language"
+            app:title="@string/language_setting"
+            app:summary="@string/language_setting_summary"
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:defaultValue="system" />
+
+        <SwitchPreferenceCompat
+            app:key="dark_theme"
+            app:title="@string/theme_setting"
+            app:summary="@string/theme_setting_summary"
+            app:defaultValue="true" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/other">
 
         <Preference
-                android:key="gms_manager"
-                android:title="@string/gms_manager"
-                android:summary="@string/jump_gms"/>
-
-
+            android:key="gms_manager"
+            android:title="@string/gms_manager"
+            android:summary="@string/jump_gms" />
 
         <SwitchPreferenceCompat
-                app:key="root_hide"
-                app:title="@string/hide_root" />
+            app:key="root_hide"
+            app:title="@string/hide_root" />
 
         <SwitchPreferenceCompat
-                app:key="daemon_enable"
-                app:title="@string/daemon_enable" />
+            app:key="daemon_enable"
+            app:title="@string/daemon_enable" />
 
         <SwitchPreferenceCompat
-                app:key="use_vpn_network"
-                app:title="@string/use_vpn_network"
-                app:summary="@string/use_vpn_network_summary" />
+            app:key="use_vpn_network"
+            app:title="@string/use_vpn_network"
+            app:summary="@string/use_vpn_network_summary" />
 
         <SwitchPreferenceCompat
-                app:key="disable_flag_secure"
-                app:title="@string/disable_flag_secure"
-                app:summary="@string/disable_flag_secure_summary" />
+            app:key="disable_flag_secure"
+            app:title="@string/disable_flag_secure"
+            app:summary="@string/disable_flag_secure_summary" />
 
         <Preference
-                android:key="send_logs"
-                android:title="Send Logs"
-                android:summary="Upload debug logs to developer" />
+            android:key="send_logs"
+            android:title="Send Logs"
+            android:summary="Upload debug logs to developer" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/about">
+
+        <Preference
+            android:key="about"
+            android:title="@string/about_summary"
+            android:summary="@string/version" />
 
     </PreferenceCategory>
 

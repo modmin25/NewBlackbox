@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="language_entries">
+        <item>@string/language_system</item>
+        <item>@string/language_en</item>
+        <item>@string/language_ar</item>
+        <item>@string/language_es</item>
+        <item>@string/language_fr</item>
+        <item>@string/language_zh_cn</item>
+        <item>@string/language_zh_tw</item>
+    </string-array>
+    <string-array name="language_values">
+        <item>system</item>
+        <item>en</item>
+        <item>ar</item>
+        <item>es</item>
+        <item>fr</item>
+        <item>zh-rCN</item>
+        <item>zh-rTW</item>
+    </string-array>
+</resources>

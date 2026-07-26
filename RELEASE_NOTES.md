@@ -1,106 +1,49 @@
-# Release Notes - NewBlackbox
+# BlackBox Pro v5.0.0 Release Notes
 
-## Version: Latest Build (2026-01-31)
+## What's New
 
----
+### Rebranding
+- App renamed from **NewBlackbox** to **BlackBox Pro**
+- New modern dark-themed adaptive icon
+- Redesigned splash screen with premium dark aesthetic
 
-### New Features
+### UI/UX Overhaul
+- **Complete Dark Theme**: Premium dark mode with deep navy/charcoal color palette
+- **Modern Color System**: Material Design 3 inspired accent colors (E94560 accent, 1A1A2E primary)
+- **Dark Status & Navigation Bars**: Fully immersive dark interface
+- **New Icon Design**: Hexagonal shield icon representing security and virtualization
 
-#### VPN Network Mode Toggle
-Added a new setting to choose between VPN and normal network mode for sandboxed apps.
+### Multi-Language Support
+- **Arabic (AR)**: Full RTL language support
+- **English (EN)**: Default language
+- **Spanish (ES)**: Complete translation
+- **French (FR)**: Complete translation
+- **Chinese Simplified (zh-CN)**: Updated translations
+- **Chinese Traditional (zh-TW)**: Updated translations
+- **Language Switcher**: Settings-based language selection with system default option
 
-- **Location:** Settings → Others → Use VPN Network
-- **Default:** OFF (normal network mode)
-- When enabled, traffic is routed through BlackBox's VPN service
-- Requires app restart to take effect
+### Settings Enhancements
+- Language selector in Settings
+- Dark theme toggle (persistent)
+- About section with version info
+- Improved preference layout with categories
 
-**Files Changed:**
-- `app/src/main/java/top/niunaijun/blackboxa/view/main/BlackBoxLoader.kt`
-- `app/src/main/java/top/niunaijun/blackboxa/view/setting/SettingFragment.kt`
-- `app/src/main/res/xml/setting.xml`
-- `app/src/main/res/values/strings.xml`
-- `Bcore/src/main/java/top/niunaijun/blackbox/app/configuration/ClientConfiguration.java`
-- `Bcore/src/main/java/top/niunaijun/blackbox/BlackBoxCore.java`
+### Code Quality
+- Added `LanguageHelper` utility for language management
+- Improved error handling in Application class
+- Updated `App.kt` for language context initialization
 
-#### Device Information Logging
-Added comprehensive device info header in logcat for easier debugging:
-- Android version, SDK level, security patch
-- Device manufacturer, brand, model, hardware
-- Supported CPU/ABIs (32-bit and 64-bit)
-- Memory info (heap usage)
-- App version and package info
-- Build fingerprint and timestamps
+### CI/CD
+- New `build-apk.yml` GitHub Actions workflow
+- Automated debug and release APK builds
+- Artifact upload for easy download
 
----
+### Configuration
+- Application ID changed to `com.blackbox.pro.app`
+- Version bump to 5.0.0 (code 500)
+- Root project name changed to `BlackBoxPro`
 
-### Bug Fixes
-
-#### VPN Permission Fix
-**Problem:** VPN service failed to establish interface (`builder.establish()` returned null).
-
-**Root Cause:** Android requires `VpnService.prepare()` to be called from an Activity before VPN can be established.
-
-**Solution:** Added VPN permission request to `MainActivity.kt` on app launch.
-
-**Files Changed:**
-- `app/src/main/java/top/niunaijun/blackboxa/view/main/MainActivity.kt`
-
----
-
-#### Android 10 Black Screen Fix
-**Problem:** Apps would show a black screen and timeout on Android 10 (API 29).
-
-**Root Cause:** 
-- `BRAttributionSource.getRealClass()` returns `null` on Android < 31
-- `SystemProviderStub.invoke()` crashed calling `.getName()` on null class
-- `ClassInvocationStub.injectHook()` crashed when `getWho()` returned null
-
-**Solution:**
-- Added null checks in `SystemProviderStub.java` for API version checks
-- Added null check in `ClassInvocationStub.java` to skip hooks when services don't exist
-
-**Files Changed:**
-- `Bcore/src/main/java/top/niunaijun/blackbox/fake/service/context/providers/SystemProviderStub.java`
-- `Bcore/src/main/java/top/niunaijun/blackbox/fake/hook/ClassInvocationStub.java`
-
----
-
-### Removed Features
-
-#### Xposed Framework Support
-- Removed `BXposedManagerService` and related AIDL interfaces
-- Removed "Install Xposed Module" UI and Settings entries
-- Cleaned up Xposed-related flags and package checks
-
----
-
-### Stability Improvements
-
-#### Anti-Detection Native Hook Stability
-- Removed `LOGD` calls from critical native hooks to prevent infinite recursion
-- Fixed syntax errors in hook implementations
-- Hooks now silently return `ENOENT` for blocked paths
-
----
-
-### Known Issues
-
-#### Oppo/ColorOS Thermal Stats Error
-On Oppo/ColorOS devices, you may see errors like:
-```
-OppoThermalStats: PackageManager$NameNotFoundException: top.niunaijun.blackboxa:p0
-```
-**This is harmless** - it's an Oppo system bug where their thermal management incorrectly uses process names (with `:p0` suffix) instead of package names. The app works normally.
-
----
-
-### Compatibility
-
-| Android Version | Status |
-|-----------------|--------|
-| Android 10 (Q)  | ✅ Fixed |
-| Android 11 (R)  | ✅ Supported |
-| Android 12 (S)  | ✅ Supported |
-| Android 13 (T)  | ✅ Supported |
-| Android 14 (U)  | ✅ Supported |
-| Android 15+     | ✅ Supported |
+## Fixed
+- Dark theme color inconsistencies
+- Location icon visibility in dark mode
+- Various string references updated for branding consistency
