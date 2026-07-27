@@ -81,4 +81,25 @@
     <string name="language_fr">法语</string>
     <string name="language_zh_cn">简体中文</string>
     <string name="language_zh_tw">繁体中文</string>
+
+    <!-- Virtual Camera -->
+    <string name="virtual_camera_title">虚拟摄像头</string>
+    <string name="virtual_camera_mode">摄像头模式</string>
+    <string name="virtual_camera_off">关闭（使用真实摄像头）</string>
+    <string name="virtual_camera_disable">禁用摄像头</string>
+    <string name="virtual_camera_local">本地视频</string>
+    <string name="virtual_camera_network">网络视频</string>
+    <string name="virtual_camera_local_title">选择视频</string>
+    <string name="virtual_camera_no_video">未选择视频</string>
+    <string name="virtual_camera_pick_video">选择视频</string>
+    <string name="virtual_camera_network_title">网络流</string>
+    <string name="virtual_camera_url_hint">视频URL（RTSP/HTTP）</string>
+    <string name="virtual_camera_audio">音频</string>
+    <string name="virtual_camera_saved">设置已保存</string>
+    <string name="virtual_camera_select_video_first">请先选择一个视频</string>
+    <string name="virtual_camera_enter_url">请输入视频URL</string>
+    <string name="virtual_camera_status_off">状态：关闭</string>
+    <string name="virtual_camera_status_disabled">状态：摄像头已禁用</string>
+    <string name="virtual_camera_status_local">状态：使用本地视频</string>
+    <string name="virtual_camera_status_network">状态：使用网络视频</string>
 </resources>

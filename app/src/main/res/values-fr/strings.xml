@@ -81,4 +81,25 @@
     <string name="language_fr">Français</string>
     <string name="language_zh_cn">Chinois (Simplifié)</string>
     <string name="language_zh_tw">Chinois (Traditionnel)</string>
+
+    <!-- Virtual Camera -->
+    <string name="virtual_camera_title">Caméra Virtuelle</string>
+    <string name="virtual_camera_mode">Mode Caméra</string>
+    <string name="virtual_camera_off">Désactivé (Utiliser la vraie caméra)</string>
+    <string name="virtual_camera_disable">Désactiver la caméra</string>
+    <string name="virtual_camera_local">Vidéo locale</string>
+    <string name="virtual_camera_network">Vidéo réseau</string>
+    <string name="virtual_camera_local_title">Sélectionner une vidéo</string>
+    <string name="virtual_camera_no_video">Aucune vidéo sélectionnée</string>
+    <string name="virtual_camera_pick_video">Choisir une vidéo</string>
+    <string name="virtual_camera_network_title">Flux Réseau</string>
+    <string name="virtual_camera_url_hint">URL de la vidéo (RTSP/HTTP)</string>
+    <string name="virtual_camera_audio">Audio</string>
+    <string name="virtual_camera_saved">Paramètres enregistrés</string>
+    <string name="virtual_camera_select_video_first">Veuillez sélectionner une vidéo</string>
+    <string name="virtual_camera_enter_url">Veuillez entrer l\'URL de la vidéo</string>
+    <string name="virtual_camera_status_off">État : Désactivé</string>
+    <string name="virtual_camera_status_disabled">État : Caméra désactivée</string>
+    <string name="virtual_camera_status_local">État : Vidéo locale</string>
+    <string name="virtual_camera_status_network">État : Vidéo réseau</string>
 </resources>

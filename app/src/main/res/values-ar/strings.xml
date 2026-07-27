@@ -81,4 +81,25 @@
     <string name="language_fr">الفرنسية</string>
     <string name="language_zh_cn">الصينية (المبسطة)</string>
     <string name="language_zh_tw">الصينية (التقليدية)</string>
+
+    <!-- Virtual Camera -->
+    <string name="virtual_camera_title">الكاميرا الافتراضية</string>
+    <string name="virtual_camera_mode">وضع الكاميرا</string>
+    <string name="virtual_camera_off">إيقاف (استخدام الكاميرا الحقيقية)</string>
+    <string name="virtual_camera_disable">تعطيل الكاميرا</string>
+    <string name="virtual_camera_local">فيديو محلي</string>
+    <string name="virtual_camera_network">فيديو عبر الشبكة</string>
+    <string name="virtual_camera_local_title">اختر فيديو</string>
+    <string name="virtual_camera_no_video">لم يتم اختيار فيديو</string>
+    <string name="virtual_camera_pick_video">اختر فيديو</string>
+    <string name="virtual_camera_network_title">البث عبر الشبكة</string>
+    <string name="virtual_camera_url_hint">رابط الفيديو (RTSP/HTTP)</string>
+    <string name="virtual_camera_audio">الصوت</string>
+    <string name="virtual_camera_saved">تم حفظ الإعدادات</string>
+    <string name="virtual_camera_select_video_first">يرجى اختيار فيديو أولاً</string>
+    <string name="virtual_camera_enter_url">يرجى إدخال رابط الفيديو</string>
+    <string name="virtual_camera_status_off">الحالة: إيقاف</string>
+    <string name="virtual_camera_status_disabled">الحالة: الكاميرا معطلة</string>
+    <string name="virtual_camera_status_local">الحالة: استخدام فيديو محلي</string>
+    <string name="virtual_camera_status_network">الحالة: استخدام فيديو عبر الشبكة</string>
 </resources>

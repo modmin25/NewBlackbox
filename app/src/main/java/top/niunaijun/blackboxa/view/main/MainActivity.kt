@@ -33,6 +33,7 @@ import top.niunaijun.blackboxa.view.gms.GmsManagerActivity
 import top.niunaijun.blackboxa.view.list.ListActivity
 import top.niunaijun.blackboxa.view.setting.SettingActivity
 import top.niunaijun.blackboxa.view.store.StoreActivity
+import top.niunaijun.blackboxa.view.camera.VirtualCameraActivity
 
 class MainActivity : LoadingActivity() {
 
@@ -114,6 +115,9 @@ class MainActivity : LoadingActivity() {
                     intent.putExtra("userID", 0)
                     startActivity(intent)
                 }
+                R.id.nav_virtual_camera -> {
+                    startActivity(Intent(this, VirtualCameraActivity::class.java))
+                }
                 R.id.nav_memory_booster -> {
                     Toast.makeText(this, R.string.memory_booster_started, Toast.LENGTH_SHORT).show()
                 }
@@ -131,7 +135,7 @@ class MainActivity : LoadingActivity() {
         val headerView = navView.getHeaderView(0)
         headerView?.let {
             it.findViewById<TextView>(R.id.nav_header_title)?.text = getString(R.string.app_name)
-            it.findViewById<TextView>(R.id.nav_header_subtitle)?.text = getString(R.string.version, "6.0.0")
+            it.findViewById<TextView>(R.id.nav_header_subtitle)?.text = getString(R.string.version, "7.0.0")
         }
     }
 

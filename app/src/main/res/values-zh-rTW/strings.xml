@@ -80,4 +80,25 @@
     <string name="language_fr">法語</string>
     <string name="language_zh_cn">簡體中文</string>
     <string name="language_zh_tw">繁體中文</string>
+
+    <!-- Virtual Camera -->
+    <string name="virtual_camera_title">虛擬鏡頭</string>
+    <string name="virtual_camera_mode">鏡頭模式</string>
+    <string name="virtual_camera_off">關閉（使用真實鏡頭）</string>
+    <string name="virtual_camera_disable">禁用鏡頭</string>
+    <string name="virtual_camera_local">本地影片</string>
+    <string name="virtual_camera_network">網路影片</string>
+    <string name="virtual_camera_local_title">選擇影片</string>
+    <string name="virtual_camera_no_video">未選擇影片</string>
+    <string name="virtual_camera_pick_video">選擇影片</string>
+    <string name="virtual_camera_network_title">網路串流</string>
+    <string name="virtual_camera_url_hint">影片URL（RTSP/HTTP）</string>
+    <string name="virtual_camera_audio">音訊</string>
+    <string name="virtual_camera_saved">設定已儲存</string>
+    <string name="virtual_camera_select_video_first">請先選擇一個影片</string>
+    <string name="virtual_camera_enter_url">請輸入影片URL</string>
+    <string name="virtual_camera_status_off">狀態：關閉</string>
+    <string name="virtual_camera_status_disabled">狀態：鏡頭已禁用</string>
+    <string name="virtual_camera_status_local">狀態：使用本地影片</string>
+    <string name="virtual_camera_status_network">狀態：使用網路影片</string>
 </resources>

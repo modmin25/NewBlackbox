@@ -49,6 +49,7 @@ import top.niunaijun.blackbox.fake.service.MediaRecorderProxy;
 import top.niunaijun.blackbox.fake.service.NetworkPermissionCompat;
 import top.niunaijun.blackbox.fake.service.AudioRecordProxy;
 import top.niunaijun.blackbox.fake.service.MediaRecorderClassProxy;
+import top.niunaijun.blackbox.fake.service.FakeCameraProxy;
 import top.niunaijun.blackbox.fake.service.SQLiteDatabaseProxy;
 import top.niunaijun.blackbox.fake.service.ClassLoaderProxy;
 import top.niunaijun.blackbox.fake.service.FileSystemProxy;
@@ -133,6 +134,7 @@ public class HookManager {
             addInjector(new ISettingsProviderProxy());
             addInjector(new FeatureFlagUtilsProxy());
             addInjector(new MediaRecorderClassProxy());
+            addInjector(new FakeCameraProxy());
             addInjector(new SQLiteDatabaseProxy());
             addInjector(new ClassLoaderProxy());
             addInjector(new FileSystemProxy());

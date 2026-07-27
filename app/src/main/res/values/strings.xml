@@ -130,4 +130,25 @@
     <string name="theme_sunset">Sunset</string>
     <string name="theme_picker">Select Theme</string>
     <string name="theme_restart">Restart app to apply theme</string>
+
+    <!-- Virtual Camera -->
+    <string name="virtual_camera_title">Virtual Camera</string>
+    <string name="virtual_camera_mode">Camera Mode</string>
+    <string name="virtual_camera_off">Off (Use real camera)</string>
+    <string name="virtual_camera_disable">Disable camera</string>
+    <string name="virtual_camera_local">Local video</string>
+    <string name="virtual_camera_network">Network video</string>
+    <string name="virtual_camera_local_title">Select Video</string>
+    <string name="virtual_camera_no_video">No video selected</string>
+    <string name="virtual_camera_pick_video">Choose Video</string>
+    <string name="virtual_camera_network_title">Network Stream</string>
+    <string name="virtual_camera_url_hint">Video URL (RTSP/HTTP)</string>
+    <string name="virtual_camera_audio">Audio</string>
+    <string name="virtual_camera_saved">Settings saved</string>
+    <string name="virtual_camera_select_video_first">Please select a video first</string>
+    <string name="virtual_camera_enter_url">Please enter a video URL</string>
+    <string name="virtual_camera_status_off">Status: Off</string>
+    <string name="virtual_camera_status_disabled">Status: Camera disabled</string>
+    <string name="virtual_camera_status_local">Status: Using local video</string>
+    <string name="virtual_camera_status_network">Status: Using network video</string>
 </resources>

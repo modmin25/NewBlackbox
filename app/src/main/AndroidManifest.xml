@@ -44,6 +44,7 @@
             android:theme="@style/WelcomeTheme" />
 
         <activity android:name=".view.store.StoreActivity" />
+        <activity android:name=".view.camera.VirtualCameraActivity" />
 
         <activity android:name=".view.list.ListActivity" />
         <activity android:name=".view.fake.FakeManagerActivity" />

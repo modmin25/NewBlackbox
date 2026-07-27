@@ -17,6 +17,10 @@
             android:id="@+id/nav_fake_location"
             android:icon="@drawable/ic_nav_location"
             android:title="@string/fake_location" />
+        <item
+            android:id="@+id/nav_virtual_camera"
+            android:icon="@drawable/ic_nav_camera"
+            android:title="@string/virtual_camera_title" />
     </group>
 
     <item android:title="@string/tools_label">
