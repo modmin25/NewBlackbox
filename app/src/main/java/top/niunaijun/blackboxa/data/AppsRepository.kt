@@ -278,8 +278,6 @@ class AppsRepository {
                         return@forEachIndexed
                     }
 
-                    val versionName = applicationInfo.versionName ?: ""
-
                     val info =
                             AppInfo(
                                     safeLoadAppLabel(applicationInfo),
@@ -290,7 +288,7 @@ class AppsRepository {
                                     applicationInfo.sourceDir ?: "",
                                     false,
                                     userId,
-                                    versionName,
+                                    "",
                                     1
                             )
 
