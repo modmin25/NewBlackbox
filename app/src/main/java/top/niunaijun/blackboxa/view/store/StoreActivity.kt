@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
+import androidx.appcompat.widget.Toolbar
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import top.niunaijun.blackboxa.R
@@ -23,7 +24,7 @@ class StoreActivity : BaseActivity() {
         LanguageHelper.applyLanguage(this)
         setContentView(R.layout.activity_store)
 
-        initToolbar(findViewById(R.id.toolbar_layout).findViewById(R.id.toolbar), R.string.store_title, true)
+        initToolbar(findViewById<Toolbar>(R.id.toolbar), R.string.store_title, true)
         setupStoreList()
         setupSearch()
         setupCategoryFilter()

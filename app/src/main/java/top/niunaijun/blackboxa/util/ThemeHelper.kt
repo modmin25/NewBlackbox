@@ -49,14 +49,12 @@ object ThemeHelper {
 
     fun getThemeColors(context: Context): Map<String, Int> {
         val ta = context.obtainStyledAttributes(getThemeResId(getTheme(context)), intArrayOf(
-            top.niunaijun.blackboxa.R.attr.colorPrimary,
-            top.niunaijun.blackboxa.R.attr.colorPrimaryVariant,
-            top.niunaijun.blackboxa.R.attr.colorSecondary
+            com.google.android.material.R.attr.colorPrimary,
+            com.google.android.material.R.attr.colorSecondary
         ))
         val colors = mapOf(
             "primary" to ta.getColor(0, 0),
-            "primaryVariant" to ta.getColor(1, 0),
-            "secondary" to ta.getColor(2, 0)
+            "secondary" to ta.getColor(1, 0)
         )
         ta.recycle()
         return colors

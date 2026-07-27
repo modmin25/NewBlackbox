@@ -114,7 +114,7 @@ class MainActivity : LoadingActivity() {
                     intent.putExtra("userID", 0)
                     startActivity(intent)
                 }
-                R.id.nav_memory_boost -> {
+                R.id.nav_memory_booster -> {
                     Toast.makeText(this, R.string.memory_booster_started, Toast.LENGTH_SHORT).show()
                 }
                 R.id.nav_privacy_guard -> {

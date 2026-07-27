@@ -12,7 +12,7 @@
     <string name="tg_group">Groupe Telegram</string>
     <string name="fake_location">Fausse Position (Aperçu)</string>
     <string name="real_location">Position Réelle</string>
-    <string name="set_location">Fausse Position définie avec succès:%s-%s</string>
+    <string name="set_location">Fausse Position définie avec succès:%1$s-%2$s</string>
     <string name="close_fake_location">Désactiver la Fausse Position</string>
     <string name="close_app_fake_location">Désactiver la Fausse Position pour %s</string>
     <string name="close_fake_location_success">Fausse Position désactivée pour %s avec succès</string>
