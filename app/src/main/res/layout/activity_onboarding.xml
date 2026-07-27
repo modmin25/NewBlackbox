@@ -68,7 +68,7 @@
                     android:text="@string/theme_cosmic"
                     android:checked="true"
                     app:chipBackgroundColor="@color/surface"
-                    app:textColor="@color/primary_text" />
+                    android:textColor="@color/primary_text" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/theme_amoled"
@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/theme_amoled"
                     app:chipBackgroundColor="@color/surface"
-                    app:textColor="@color/primary_text" />
+                    android:textColor="@color/primary_text" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/theme_neon"
@@ -86,7 +86,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/theme_neon"
                     app:chipBackgroundColor="@color/surface"
-                    app:textColor="@color/primary_text" />
+                    android:textColor="@color/primary_text" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/theme_forest"
@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/theme_forest"
                     app:chipBackgroundColor="@color/surface"
-                    app:textColor="@color/primary_text" />
+                    android:textColor="@color/primary_text" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/theme_ocean"
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/theme_ocean"
                     app:chipBackgroundColor="@color/surface"
-                    app:textColor="@color/primary_text" />
+                    android:textColor="@color/primary_text" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/theme_sunset"
@@ -113,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/theme_sunset"
                     app:chipBackgroundColor="@color/surface"
-                    app:textColor="@color/primary_text" />
+                    android:textColor="@color/primary_text" />
 
             </com.google.android.material.chip.ChipGroup>
 

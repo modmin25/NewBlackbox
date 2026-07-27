@@ -54,7 +54,7 @@
             app:chipBackgroundColor="@color/surface"
             app:chipStrokeColor="@color/divider"
             app:chipStrokeWidth="1dp"
-            app:textColor="@color/primary_text" />
+            android:textColor="@color/primary_text" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_games"
@@ -65,7 +65,7 @@
             app:chipBackgroundColor="@color/surface"
             app:chipStrokeColor="@color/divider"
             app:chipStrokeWidth="1dp"
-            app:textColor="@color/primary_text" />
+            android:textColor="@color/primary_text" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_tools"
@@ -76,7 +76,7 @@
             app:chipBackgroundColor="@color/surface"
             app:chipStrokeColor="@color/divider"
             app:chipStrokeWidth="1dp"
-            app:textColor="@color/primary_text" />
+            android:textColor="@color/primary_text" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_social"
@@ -87,7 +87,7 @@
             app:chipBackgroundColor="@color/surface"
             app:chipStrokeColor="@color/divider"
             app:chipStrokeWidth="1dp"
-            app:textColor="@color/primary_text" />
+            android:textColor="@color/primary_text" />
 
     </com.google.android.material.chip.ChipGroup>
 
