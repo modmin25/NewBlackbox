@@ -25,7 +25,6 @@
         <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
         <item name="colorError">@color/error</item>
         <item name="colorOnError">@color/white</item>
-        <item name="colorRipple">@color/ripple_color</item>
     </style>
 
     <!-- Neon Theme -->
