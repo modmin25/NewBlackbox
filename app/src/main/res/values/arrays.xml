@@ -18,4 +18,21 @@
         <item>zh-rCN</item>
         <item>zh-rTW</item>
     </string-array>
+
+    <string-array name="theme_entries">
+        <item>@string/theme_cosmic</item>
+        <item>@string/theme_neon</item>
+        <item>@string/theme_amoled</item>
+        <item>@string/theme_forest</item>
+        <item>@string/theme_ocean</item>
+        <item>@string/theme_sunset</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>cosmic</item>
+        <item>neon</item>
+        <item>amoled</item>
+        <item>forest</item>
+        <item>ocean</item>
+        <item>sunset</item>
+    </string-array>
 </resources>

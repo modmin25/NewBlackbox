@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_apps"
+            android:icon="@drawable/ic_nav_apps"
+            android:title="@string/installed_app" />
+        <item
+            android:id="@+id/nav_store"
+            android:icon="@drawable/ic_nav_store"
+            android:title="@string/store_title" />
+        <item
+            android:id="@+id/nav_gms"
+            android:icon="@drawable/ic_nav_gms"
+            android:title="@string/gms_manager" />
+        <item
+            android:id="@+id/nav_fake_location"
+            android:icon="@drawable/ic_nav_location"
+            android:title="@string/fake_location" />
+    </group>
+
+    <item android:title="@string/tools_label">
+        <menu>
+            <item
+                android:id="@+id/nav_memory_booster"
+                android:icon="@drawable/ic_nav_memory"
+                android:title="@string/memory_booster" />
+            <item
+                android:id="@+id/nav_privacy_guard"
+                android:icon="@drawable/ic_nav_privacy"
+                android:title="@string/privacy_guard" />
+        </menu>
+    </item>
+
+    <item android:title="@string/settings_label">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_nav_settings"
+                android:title="@string/setting" />
+            <item
+                android:id="@+id/nav_module"
+                android:icon="@drawable/ic_nav_module"
+                android:title="@string/module_setting" />
+        </menu>
+    </item>
+</menu>

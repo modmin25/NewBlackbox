@@ -8,23 +8,31 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.content.edit
+import androidx.core.view.GravityCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.input.input
+import com.google.android.material.navigation.NavigationView
 import top.niunaijun.blackbox.BlackBoxCore
 import top.niunaijun.blackboxa.R
 import top.niunaijun.blackboxa.app.App
 import top.niunaijun.blackboxa.app.AppManager
 import top.niunaijun.blackboxa.databinding.ActivityMainBinding
 import top.niunaijun.blackboxa.util.Resolution
+import top.niunaijun.blackboxa.util.ThemeHelper
 import top.niunaijun.blackboxa.util.inflate
 import top.niunaijun.blackboxa.view.apps.AppsFragment
 import top.niunaijun.blackboxa.view.base.LoadingActivity
 import top.niunaijun.blackboxa.view.fake.FakeManagerActivity
+import top.niunaijun.blackboxa.view.gms.GmsManagerActivity
 import top.niunaijun.blackboxa.view.list.ListActivity
 import top.niunaijun.blackboxa.view.setting.SettingActivity
+import top.niunaijun.blackboxa.view.store.StoreActivity
 
 class MainActivity : LoadingActivity() {
 
@@ -35,6 +43,8 @@ class MainActivity : LoadingActivity() {
     private val fragmentList = mutableListOf<AppsFragment>()
 
     private var currentUser = 0
+
+    private lateinit var toggle: ActionBarDrawerToggle
 
     companion object {
         private const val TAG = "MainActivity"
@@ -48,6 +58,7 @@ class MainActivity : LoadingActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        ThemeHelper.applyTheme(this)
         try {
             super.onCreate(savedInstanceState)
 
@@ -59,14 +70,12 @@ class MainActivity : LoadingActivity() {
 
             setContentView(viewBinding.root)
             initToolbar(viewBinding.toolbarLayout.toolbar, R.string.app_name)
+            initDrawer()
             initViewPager()
             initFab()
             initToolbarSubTitle()
 
-            
             checkStoragePermission()
-
-            
             checkVpnPermission()
 
             try {
@@ -76,34 +85,74 @@ class MainActivity : LoadingActivity() {
             }
         } catch (e: Exception) {
             Log.e(TAG, "Critical error in onCreate: ${e.message}")
-            
             showErrorDialog("Failed to initialize app: ${e.message}")
+        }
+    }
+
+    private fun initDrawer() {
+        toggle = ActionBarDrawerToggle(
+            this,
+            viewBinding.drawerLayout,
+            viewBinding.toolbarLayout.toolbar,
+            R.string.nav_menu,
+            R.string.nav_menu
+        )
+        viewBinding.drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        val navView = viewBinding.navView
+        navView.setNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_store -> {
+                    startActivity(Intent(this, StoreActivity::class.java))
+                }
+                R.id.nav_gms -> {
+                    GmsManagerActivity.start(this)
+                }
+                R.id.nav_fake_location -> {
+                    val intent = Intent(this, FakeManagerActivity::class.java)
+                    intent.putExtra("userID", 0)
+                    startActivity(intent)
+                }
+                R.id.nav_memory_boost -> {
+                    Toast.makeText(this, R.string.memory_booster_started, Toast.LENGTH_SHORT).show()
+                }
+                R.id.nav_privacy_guard -> {
+                    Toast.makeText(this, R.string.privacy_guard_active, Toast.LENGTH_SHORT).show()
+                }
+                R.id.nav_settings -> {
+                    SettingActivity.start(this)
+                }
+            }
+            viewBinding.drawerLayout.closeDrawer(GravityCompat.START)
+            true
+        }
+
+        val headerView = navView.getHeaderView(0)
+        headerView?.let {
+            it.findViewById<TextView>(R.id.nav_header_title)?.text = getString(R.string.app_name)
+            it.findViewById<TextView>(R.id.nav_header_subtitle)?.text = getString(R.string.version, "6.0.0")
         }
     }
 
     private fun checkStoragePermission() {
         try {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
-                
                 if (!android.os.Environment.isExternalStorageManager()) {
                     Log.w(TAG, "MANAGE_EXTERNAL_STORAGE permission not granted")
                     showStoragePermissionDialog()
                 }
             } else {
-                
                 if (androidx.core.content.ContextCompat.checkSelfPermission(
-                                this,
-                                android.Manifest.permission.WRITE_EXTERNAL_STORAGE
-                        ) != android.content.pm.PackageManager.PERMISSION_GRANTED ||
-                                androidx.core.content.ContextCompat.checkSelfPermission(
-                                        this,
-                                        android.Manifest.permission.READ_EXTERNAL_STORAGE
-                                ) != android.content.pm.PackageManager.PERMISSION_GRANTED
+                        this,
+                        android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+                    ) != android.content.pm.PackageManager.PERMISSION_GRANTED ||
+                    androidx.core.content.ContextCompat.checkSelfPermission(
+                        this,
+                        android.Manifest.permission.READ_EXTERNAL_STORAGE
+                    ) != android.content.pm.PackageManager.PERMISSION_GRANTED
                 ) {
-                    Log.w(
-                            TAG,
-                            "Storage permissions not granted on Android ${android.os.Build.VERSION.SDK_INT}"
-                    )
+                    Log.w(TAG, "Storage permissions not granted on Android ${android.os.Build.VERSION.SDK_INT}")
                     requestLegacyStoragePermission()
                 }
             }
@@ -115,12 +164,12 @@ class MainActivity : LoadingActivity() {
     private fun requestLegacyStoragePermission() {
         try {
             androidx.core.app.ActivityCompat.requestPermissions(
-                    this,
-                    arrayOf(
-                            android.Manifest.permission.READ_EXTERNAL_STORAGE,
-                            android.Manifest.permission.WRITE_EXTERNAL_STORAGE
-                    ),
-                    STORAGE_PERMISSION_REQUEST_CODE
+                this,
+                arrayOf(
+                    android.Manifest.permission.READ_EXTERNAL_STORAGE,
+                    android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+                ),
+                STORAGE_PERMISSION_REQUEST_CODE
             )
         } catch (e: Exception) {
             Log.e(TAG, "Error requesting storage permission: ${e.message}")
@@ -128,16 +177,14 @@ class MainActivity : LoadingActivity() {
     }
 
     override fun onRequestPermissionsResult(
-            requestCode: Int,
-            permissions: Array<out String>,
-            grantResults: IntArray
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == STORAGE_PERMISSION_REQUEST_CODE) {
             if (grantResults.isNotEmpty() &&
-                            grantResults.all {
-                                it == android.content.pm.PackageManager.PERMISSION_GRANTED
-                            }
+                grantResults.all { it == android.content.pm.PackageManager.PERMISSION_GRANTED }
             ) {
                 Log.d(TAG, "Storage permissions granted")
             } else {
@@ -151,8 +198,7 @@ class MainActivity : LoadingActivity() {
             MaterialDialog(this).show {
                 title(text = "Storage Permission Required")
                 message(
-                        text =
-                                "This app needs 'All Files Access' permission to properly run sandboxed apps. Without this permission, some apps may not work correctly.\n\nPlease grant permission in the next screen."
+                    text = "This app needs 'All Files Access' permission to properly run sandboxed apps. Without this permission, some apps may not work correctly.\n\nPlease grant permission in the next screen."
                 )
                 positiveButton(text = "Grant Permission") { openAllFilesAccessSettings() }
                 negativeButton(text = "Later") { Log.w(TAG, "User postponed storage permission") }
@@ -166,20 +212,16 @@ class MainActivity : LoadingActivity() {
     private fun openAllFilesAccessSettings() {
         try {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
-                val intent =
-                        Intent(
-                                android.provider.Settings
-                                        .ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
-                        )
+                val intent = Intent(
+                    android.provider.Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
+                )
                 intent.data = Uri.parse("package:$packageName")
                 storagePermissionResult.launch(intent)
             }
         } catch (e: Exception) {
             Log.e(TAG, "Error opening storage settings: ${e.message}")
-            
             try {
-                val intent =
-                        Intent(android.provider.Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION)
+                val intent = Intent(android.provider.Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION)
                 storagePermissionResult.launch(intent)
             } catch (e2: Exception) {
                 Log.e(TAG, "Error opening fallback storage settings: ${e2.message}")
@@ -188,30 +230,27 @@ class MainActivity : LoadingActivity() {
     }
 
     private val storagePermissionResult =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-                try {
-                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
-                        if (android.os.Environment.isExternalStorageManager()) {
-                            Log.d(TAG, "Storage permission granted!")
-                        } else {
-                            Log.w(TAG, "Storage permission still not granted")
-                        }
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            try {
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+                    if (android.os.Environment.isExternalStorageManager()) {
+                        Log.d(TAG, "Storage permission granted!")
+                    } else {
+                        Log.w(TAG, "Storage permission still not granted")
                     }
-                } catch (e: Exception) {
-                    Log.e(TAG, "Error handling storage permission result: ${e.message}")
                 }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error handling storage permission result: ${e.message}")
             }
+        }
 
-    
     private fun checkVpnPermission() {
         try {
             val vpnIntent = VpnService.prepare(this)
             if (vpnIntent != null) {
-                
                 Log.d(TAG, "VPN permission not granted, requesting...")
                 vpnPermissionResult.launch(vpnIntent)
             } else {
-                
                 Log.d(TAG, "VPN permission already granted")
             }
         } catch (e: Exception) {
@@ -220,18 +259,17 @@ class MainActivity : LoadingActivity() {
     }
 
     private val vpnPermissionResult =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-                try {
-                    if (result.resultCode == RESULT_OK) {
-                        Log.d(TAG, "VPN permission granted!")
-                        
-                    } else {
-                        Log.w(TAG, "VPN permission denied by user")
-                    }
-                } catch (e: Exception) {
-                    Log.e(TAG, "Error handling VPN permission result: ${e.message}")
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            try {
+                if (result.resultCode == RESULT_OK) {
+                    Log.d(TAG, "VPN permission granted!")
+                } else {
+                    Log.w(TAG, "VPN permission denied by user")
                 }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error handling VPN permission result: ${e.message}")
             }
+        }
 
     private fun showErrorDialog(message: String) {
         try {
@@ -249,14 +287,13 @@ class MainActivity : LoadingActivity() {
     private fun initToolbarSubTitle() {
         try {
             updateUserRemark(0)
-            
             viewBinding.toolbarLayout.toolbar.getChildAt(1)?.setOnClickListener {
                 try {
                     MaterialDialog(this).show {
                         title(res = R.string.userRemark)
                         input(
-                                hintRes = R.string.userRemark,
-                                prefill = viewBinding.toolbarLayout.toolbar.subtitle
+                            hintRes = R.string.userRemark,
+                            prefill = viewBinding.toolbarLayout.toolbar.subtitle
                         ) { _, input ->
                             try {
                                 AppManager.mRemarkSharedPreferences.edit {
@@ -292,18 +329,18 @@ class MainActivity : LoadingActivity() {
             viewBinding.viewPager.adapter = mViewPagerAdapter
             viewBinding.dotsIndicator.setViewPager2(viewBinding.viewPager)
             viewBinding.viewPager.registerOnPageChangeCallback(
-                    object : ViewPager2.OnPageChangeCallback() {
-                        override fun onPageSelected(position: Int) {
-                            try {
-                                super.onPageSelected(position)
-                                currentUser = fragmentList[position].userID
-                                updateUserRemark(currentUser)
-                                showFloatButton(true)
-                            } catch (e: Exception) {
-                                Log.e(TAG, "Error in onPageSelected: ${e.message}")
-                            }
+                object : ViewPager2.OnPageChangeCallback() {
+                    override fun onPageSelected(position: Int) {
+                        try {
+                            super.onPageSelected(position)
+                            currentUser = fragmentList[position].userID
+                            updateUserRemark(currentUser)
+                            showFloatButton(true)
+                        } catch (e: Exception) {
+                            Log.e(TAG, "Error in onPageSelected: ${e.message}")
                         }
                     }
+                }
             )
         } catch (e: Exception) {
             Log.e(TAG, "Error in initViewPager: ${e.message}")
@@ -359,12 +396,10 @@ class MainActivity : LoadingActivity() {
 
     private fun updateUserRemark(userId: Int) {
         try {
-            var remark =
-                    AppManager.mRemarkSharedPreferences.getString("Remark$userId", "User $userId")
+            var remark = AppManager.mRemarkSharedPreferences.getString("Remark$userId", "User $userId")
             if (remark.isNullOrEmpty()) {
                 remark = "User $userId"
             }
-
             viewBinding.toolbarLayout.toolbar.subtitle = remark
         } catch (e: Exception) {
             Log.e(TAG, "Error updating user remark: ${e.message}")
@@ -373,21 +408,21 @@ class MainActivity : LoadingActivity() {
     }
 
     private val apkPathResult =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-                try {
-                    if (it.resultCode == RESULT_OK) {
-                        it.data?.let { data ->
-                            val userId = data.getIntExtra("userID", 0)
-                            val source = data.getStringExtra("source")
-                            if (source != null) {
-                                fragmentList[userId].installApk(source)
-                            }
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            try {
+                if (it.resultCode == RESULT_OK) {
+                    it.data?.let { data ->
+                        val userId = data.getIntExtra("userID", 0)
+                        val source = data.getStringExtra("source")
+                        if (source != null) {
+                            fragmentList[userId].installApk(source)
                         }
                     }
-                } catch (e: Exception) {
-                    Log.e(TAG, "Error handling APK path result: ${e.message}")
                 }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error handling APK path result: ${e.message}")
             }
+        }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         try {
@@ -403,11 +438,10 @@ class MainActivity : LoadingActivity() {
         try {
             when (item.itemId) {
                 R.id.main_git -> {
-                    val intent =
-                            Intent(
-                                    Intent.ACTION_VIEW,
-                                    Uri.parse("https://github.com/ALEX5402/NewBlackbox")
-                            )
+                    val intent = Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse("https://github.com/ALEX5402/NewBlackbox")
+                    )
                     startActivity(intent)
                 }
                 R.id.main_setting -> {
@@ -418,13 +452,11 @@ class MainActivity : LoadingActivity() {
                     startActivity(intent)
                 }
                 R.id.fake_location -> {
-                    
                     val intent = Intent(this, FakeManagerActivity::class.java)
                     intent.putExtra("userID", 0)
                     startActivity(intent)
                 }
             }
-
             return true
         } catch (e: Exception) {
             Log.e(TAG, "Error handling menu item selection: ${e.message}")

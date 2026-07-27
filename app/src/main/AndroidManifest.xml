@@ -2,15 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />
-
-    
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="29" />
-
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:name=".app.App"
@@ -23,22 +20,31 @@
         android:theme="@style/Theme.BlackBox"
         android:enableOnBackInvokedCallback="true"
         tools:targetApi="n">
+
         <activity
             android:name=".view.fake.FollowMyLocationOverlay"
             android:exported="false" />
         <activity android:name=".view.setting.SettingActivity" />
         <activity android:name=".view.gms.GmsManagerActivity" />
+
         <activity
-            android:name=".view.main.WelcomeActivity"
+            android:name=".view.onboarding.OnboardingActivity"
             android:exported="true"
-            android:launchMode="singleTop"
-            android:theme="@style/WelcomeTheme">
+            android:theme="@style/Theme.BlackBox">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".view.main.WelcomeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/WelcomeTheme" />
+
+        <activity android:name=".view.store.StoreActivity" />
+
         <activity android:name=".view.list.ListActivity" />
         <activity android:name=".view.fake.FakeManagerActivity" />
 
@@ -46,11 +52,19 @@
             android:name=".view.main.ShortcutActivity"
             android:excludeFromRecents="true"
             android:exported="true" />
-        <activity android:name=".view.main.MainActivity"
+
+        <activity
+            android:name=".view.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".view.tools.FloatingToolsService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
+
     </application>
 </manifest>

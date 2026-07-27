@@ -1,6 +1,7 @@
 package top.niunaijun.blackboxa.view.setting
 
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -9,6 +10,7 @@ import top.niunaijun.blackbox.BlackBoxCore
 import top.niunaijun.blackboxa.R
 import top.niunaijun.blackboxa.app.AppManager
 import top.niunaijun.blackboxa.util.LanguageHelper
+import top.niunaijun.blackboxa.util.ThemeHelper
 import top.niunaijun.blackboxa.util.toast
 import top.niunaijun.blackboxa.view.gms.GmsManagerActivity
 
@@ -18,6 +20,7 @@ class SettingFragment : PreferenceFragmentCompat() {
         setPreferencesFromResource(R.xml.setting, rootKey)
 
         initLanguage()
+        initTheme()
         initGms()
 
         invalidHideState {
@@ -65,11 +68,25 @@ class SettingFragment : PreferenceFragmentCompat() {
         }
     }
 
+    private fun initTheme() {
+        val themePreference: ListPreference? = findPreference("app_theme")
+        themePreference?.let {
+            it.value = ThemeHelper.getTheme(requireContext())
+            it.summaryProvider = ListPreference.SimpleSummaryProvider.getInstance()
+            it.setOnPreferenceChangeListener { _, newValue ->
+                val theme = newValue as String
+                ThemeHelper.setTheme(requireContext(), theme)
+                ThemeHelper.applyTheme(requireActivity())
+                toast(R.string.theme_restart)
+                true
+            }
+        }
+    }
+
     private fun initGms() {
         val gmsManagerPreference: Preference = (findPreference("gms_manager")!!)
 
         if (BlackBoxCore.get().isSupportGms) {
-
             gmsManagerPreference.setOnPreferenceClickListener {
                 GmsManagerActivity.start(requireContext())
                 true
@@ -98,7 +115,6 @@ class SettingFragment : PreferenceFragmentCompat() {
                     AppManager.mBlackBoxLoader.invalidDisableFlagSecure(tmpHide)
                 }
             }
-
             toast(R.string.restart_module)
             return@setOnPreferenceChangeListener true
         }

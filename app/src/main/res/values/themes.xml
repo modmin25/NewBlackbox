@@ -1,25 +1,115 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Default Cosmic Theme -->
     <style name="Theme.BlackBox" parent="Theme.MaterialComponents.NoActionBar">
-
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-
         <item name="colorSecondary">@color/accent</item>
         <item name="colorSecondaryVariant">@color/accent_dark</item>
         <item name="colorOnSecondary">@color/white</item>
-
         <item name="android:colorBackground">@color/background</item>
         <item name="android:windowBackground">@color/background</item>
         <item name="android:statusBarColor" tools:targetApi="l">@color/status_bar</item>
         <item name="android:navigationBarColor" tools:targetApi="l">@color/status_bar</item>
-
         <item name="android:textColorPrimary">@color/primary_text</item>
         <item name="android:textColorSecondary">@color/secondary_text</item>
-
         <item name="actionMenuTextColor">@color/primary_text</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
 
+    <!-- Neon Theme -->
+    <style name="Theme.Neon" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/neon_primary</item>
+        <item name="colorPrimaryVariant">@color/neon_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/neon_accent</item>
+        <item name="colorSecondaryVariant">@color/neon_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/neon_primary</item>
+        <item name="android:windowBackground">@color/neon_primary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/neon_status_bar</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/neon_status_bar</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="actionMenuTextColor">@color/primary_text</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <!-- AMOLED Theme -->
+    <style name="Theme.Amoled" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/amoled_primary</item>
+        <item name="colorPrimaryVariant">@color/amoled_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/amoled_accent</item>
+        <item name="colorSecondaryVariant">@color/amoled_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/amoled_primary</item>
+        <item name="android:windowBackground">@color/amoled_primary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/amoled_status_bar</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/amoled_status_bar</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="actionMenuTextColor">@color/primary_text</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <!-- Forest Theme -->
+    <style name="Theme.Forest" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/forest_primary</item>
+        <item name="colorPrimaryVariant">@color/forest_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/forest_accent</item>
+        <item name="colorSecondaryVariant">@color/forest_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/forest_primary</item>
+        <item name="android:windowBackground">@color/forest_primary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/forest_status_bar</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/forest_status_bar</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="actionMenuTextColor">@color/primary_text</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <!-- Ocean Theme -->
+    <style name="Theme.Ocean" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/ocean_primary</item>
+        <item name="colorPrimaryVariant">@color/ocean_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/ocean_accent</item>
+        <item name="colorSecondaryVariant">@color/ocean_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/ocean_primary</item>
+        <item name="android:windowBackground">@color/ocean_primary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/ocean_status_bar</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/ocean_status_bar</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="actionMenuTextColor">@color/primary_text</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <!-- Sunset Theme -->
+    <style name="Theme.Sunset" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/sunset_primary</item>
+        <item name="colorPrimaryVariant">@color/sunset_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/sunset_accent</item>
+        <item name="colorSecondaryVariant">@color/sunset_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/sunset_primary</item>
+        <item name="android:windowBackground">@color/sunset_primary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/sunset_status_bar</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/sunset_status_bar</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="actionMenuTextColor">@color/primary_text</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>

@@ -12,11 +12,13 @@
             app:entryValues="@array/language_values"
             app:defaultValue="system" />
 
-        <SwitchPreferenceCompat
-            app:key="dark_theme"
-            app:title="@string/theme_setting"
+        <ListPreference
+            app:key="app_theme"
+            app:title="@string/theme_picker"
             app:summary="@string/theme_setting_summary"
-            app:defaultValue="true" />
+            app:entries="@array/theme_entries"
+            app:entryValues="@array/theme_values"
+            app:defaultValue="cosmic" />
 
     </PreferenceCategory>
 

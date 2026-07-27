@@ -25,4 +25,41 @@
     <color name="warning">#FFC107</color>
     <color name="error">#F44336</color>
     <color name="ripple_color">#33E94560</color>
+
+    <!-- Neon Theme -->
+    <color name="neon_primary">#0D0221</color>
+    <color name="neon_primary_dark">#0A0118</color>
+    <color name="neon_primary_light">#150635</color>
+    <color name="neon_accent">#FF2E97</color>
+    <color name="neon_status_bar">#05010D</color>
+    <color name="neon_toolbar_bg">#0D0221</color>
+
+    <!-- AMOLED Theme -->
+    <color name="amoled_primary">#000000</color>
+    <color name="amoled_primary_dark">#000000</color>
+    <color name="amoled_accent">#00E5FF</color>
+    <color name="amoled_status_bar">#000000</color>
+    <color name="amoled_toolbar_bg">#000000</color>
+    <color name="amoled_surface">#0A0A0A</color>
+
+    <!-- Forest Theme -->
+    <color name="forest_primary">#1B2A1B</color>
+    <color name="forest_primary_dark">#0F1E0F</color>
+    <color name="forest_accent">#4CAF50</color>
+    <color name="forest_status_bar">#0A140A</color>
+    <color name="forest_toolbar_bg">#1B2A1B</color>
+
+    <!-- Ocean Theme -->
+    <color name="ocean_primary">#0A1929</color>
+    <color name="ocean_primary_dark">#061320</color>
+    <color name="ocean_accent">#00B4D8</color>
+    <color name="ocean_status_bar">#030D18</color>
+    <color name="ocean_toolbar_bg">#0A1929</color>
+
+    <!-- Sunset Theme -->
+    <color name="sunset_primary">#2D1B2E</color>
+    <color name="sunset_primary_dark">#1E0F1F</color>
+    <color name="sunset_accent">#FF7B54</color>
+    <color name="sunset_status_bar">#140715</color>
+    <color name="sunset_toolbar_bg">#2D1B2E</color>
 </resources>

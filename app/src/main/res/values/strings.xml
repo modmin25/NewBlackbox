@@ -3,14 +3,14 @@
     <string name="app_name">BlackBox Pro</string>
     <string name="choose">Choose</string>
     <string name="choose_app">Choose App</string>
-    <string name="installed_app">Installed App</string>
+    <string name="installed_app">Installed Apps</string>
     <string name="installed_module">Installed Module</string>
     <string name="empty_empty">Empty</string>
     <string name="filter">Filter</string>
     <string name="open_source_path">Open Source</string>
     <string name="xp_setting">Xposed Setting</string>
     <string name="tg_group">Telegram Group</string>
-    <string name="fake_location">Fake Location(Preview)</string>
+    <string name="fake_location">Fake Location</string>
     <string name="real_location">Real Location</string>
     <string name="set_location">Set Fake Location Successfully:%s-%s</string>
     <string name="close_fake_location">Disable FakeLocation</string>
@@ -57,20 +57,20 @@
     <string name="other">Others</string>
     <string name="daemon_enable">Daemon</string>
     <string name="use_vpn_network">Use VPN Network</string>
-    <string name="use_vpn_network_summary">Route traffic through VPN for sandboxed apps (may improve network access)</string>
+    <string name="use_vpn_network_summary">Route traffic through VPN for sandboxed apps</string>
     <string name="disable_flag_secure">Disable Flag Secure</string>
     <string name="disable_flag_secure_summary">Allow screenshots and screen recording in apps</string>
     <string name="gms_manager">GMS Manager</string>
     <string name="jump_gms">Go to Gms Manager</string>
     <string name="enable_gms">Enable Service</string>
-    <string name="enable_gms_hint">Opening Google services can make youtube and other software that strongly rely on Google play services run normally.</string>
+    <string name="enable_gms_hint">Open Google services to make YouTube and other apps work normally.</string>
     <string name="disable_gms">Disable Service</string>
-    <string name="disable_gms_hint">Clear the current Google service environment? Google service data will be cleared.</string>
-    <string name="no_gms">Currently, there is no Google service environment on mobile phones.</string>
+    <string name="disable_gms_hint">Clear the current Google service environment?</string>
+    <string name="no_gms">No Google service environment on this device.</string>
     <string name="language_setting">Language</string>
     <string name="language_setting_summary">Change the app language</string>
-    <string name="theme_setting">Dark Theme</string>
-    <string name="theme_setting_summary">Toggle dark mode appearance</string>
+    <string name="theme_setting">Theme</string>
+    <string name="theme_setting_summary">Select your preferred theme</string>
     <string name="about">About</string>
     <string name="about_summary">BlackBox Pro - Virtual Engine</string>
     <string name="version">Version %s</string>
@@ -81,4 +81,53 @@
     <string name="language_fr">French</string>
     <string name="language_zh_cn">Chinese (Simplified)</string>
     <string name="language_zh_tw">Chinese (Traditional)</string>
+
+    <!-- Navigation Drawer -->
+    <string name="nav_menu">Menu</string>
+    <string name="tools_label">Tools</string>
+    <string name="settings_label">Settings</string>
+
+    <!-- Store -->
+    <string name="store_title">Internal Store</string>
+    <string name="store_search_hint">Search apps &amp; addons...</string>
+    <string name="store_install">Install</string>
+    <string name="store_installed">Installed</string>
+    <string name="store_installing">Installing %s...</string>
+    <string name="store_category_all">All</string>
+    <string name="store_category_games">Games</string>
+    <string name="store_category_tools">Tools</string>
+    <string name="store_category_social">Social</string>
+
+    <!-- Floating Tools -->
+    <string name="quick_tools">Quick Tools</string>
+    <string name="tool_app_cloner">App Cloner</string>
+    <string name="tool_file_manager">File Manager</string>
+    <string name="tool_short_clone">Clone</string>
+    <string name="tool_short_files">Files</string>
+    <string name="tool_short_boost">Boost</string>
+    <string name="tool_short_privacy">Privacy</string>
+
+    <!-- Tools -->
+    <string name="memory_booster">Memory Booster</string>
+    <string name="memory_booster_started">Memory cleared successfully</string>
+    <string name="privacy_guard">Privacy Guard</string>
+    <string name="privacy_guard_active">Privacy Guard enabled</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">Welcome to BlackBox Pro</string>
+    <string name="onboarding_subtitle">Your premium virtual environment platform.\nChoose your preferred theme and language to get started.</string>
+    <string name="onboarding_select_theme">Choose Your Theme</string>
+    <string name="onboarding_select_language">Choose Language</string>
+    <string name="onboarding_get_started">Get Started</string>
+    <string name="onboarding_welcome">Welcome aboard!</string>
+
+    <!-- Theme Names -->
+    <string name="theme_cosmic">Cosmic</string>
+    <string name="theme_amoled">AMOLED Black</string>
+    <string name="theme_neon">Neon</string>
+    <string name="theme_forest">Forest</string>
+    <string name="theme_ocean">Ocean</string>
+    <string name="theme_sunset">Sunset</string>
+    <string name="theme_picker">Select Theme</string>
+    <string name="theme_restart">Restart app to apply theme</string>
 </resources>
