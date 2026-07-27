@@ -278,12 +278,7 @@ class AppsRepository {
                         return@forEachIndexed
                     }
 
-                    val versionName = try {
-                        val pkgInfo = blackBoxCore.getPackageManager().getPackageInfo(applicationInfo.packageName, 0)
-                        pkgInfo?.versionName ?: ""
-                    } catch (e: Exception) {
-                        ""
-                    }
+                    val versionName = applicationInfo.versionName ?: ""
 
                     val info =
                             AppInfo(
