@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Default Cosmic Theme -->
+    <!-- Default Cosmic Theme (Glassmorphism Dark) -->
     <style name="Theme.BlackBox" parent="Theme.MaterialComponents.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_dark</item>
@@ -17,6 +17,15 @@
         <item name="actionMenuTextColor">@color/primary_text</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Glass</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Glass</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorRipple">@color/ripple_color</item>
     </style>
 
     <!-- Neon Theme -->
@@ -36,6 +45,8 @@
         <item name="actionMenuTextColor">@color/primary_text</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Glass</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Glass</item>
     </style>
 
     <!-- AMOLED Theme -->
@@ -55,6 +66,8 @@
         <item name="actionMenuTextColor">@color/primary_text</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Glass</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Glass</item>
     </style>
 
     <!-- Forest Theme -->
@@ -74,6 +87,8 @@
         <item name="actionMenuTextColor">@color/primary_text</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Glass</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Glass</item>
     </style>
 
     <!-- Ocean Theme -->
@@ -93,6 +108,8 @@
         <item name="actionMenuTextColor">@color/primary_text</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Glass</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Glass</item>
     </style>
 
     <!-- Sunset Theme -->
@@ -112,6 +129,13 @@
         <item name="actionMenuTextColor">@color/primary_text</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Glass</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Glass</item>
+    </style>
+
+    <!-- Glassmorphism Shape -->
+    <style name="ShapeAppearance.Glass" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">16dp</item>
     </style>
 
     <style name="ToolBarColorStyle" parent="ThemeOverlay.AppCompat.ActionBar">

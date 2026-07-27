@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Default Cosmic Theme (Glassmorphism) -->
     <color name="primary">#1A1A2E</color>
     <color name="primary_dark">#16213E</color>
     <color name="primary_light">#0F3460</color>
     <color name="accent">#E94560</color>
-    <color name="primary_text">#E0E0E0</color>
+    <color name="primary_text">#F0F0F0</color>
     <color name="secondary_text">#9E9E9E</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="background">#121212</color>
-    <color name="surface">#1E1E1E</color>
-    <color name="surface_variant">#2C2C2C</color>
-    <color name="on_background">#E0E0E0</color>
-    <color name="on_surface">#E0E0E0</color>
+    <color name="background">#0D0D1A</color>
+    <color name="surface">#1A1A2E</color>
+    <color name="surface_variant">#252540</color>
+    <color name="on_background">#F0F0F0</color>
+    <color name="on_surface">#F0F0F0</color>
     <color name="on_surface_variant">#9E9E9E</color>
     <color name="toolbar_bg">#1A1A2E</color>
-    <color name="status_bar">#0F0F23</color>
-    <color name="card_bg">#1E1E2E</color>
-    <color name="divider">#333333</color>
+    <color name="status_bar">#0A0A18</color>
+    <color name="card_bg">#1E1E35</color>
+    <color name="card_bg_glass">#25254099</color>
+    <color name="divider">#33FFFFFF</color>
     <color name="fab_color">#E94560</color>
-    <color name="splash_bg">#121212</color>
+    <color name="splash_bg">#0D0D1A</color>
     <color name="accent_light">#FF6B81</color>
     <color name="accent_dark">#C73E54</color>
     <color name="success">#4CAF50</color>
     <color name="warning">#FFC107</color>
     <color name="error">#F44336</color>
     <color name="ripple_color">#33E94560</color>
+    <color name="glass_tint">#15FFFFFF</color>
+    <color name="glass_border">#20FFFFFF</color>
+    <color name="gradient_start">#1A1A2E</color>
+    <color name="gradient_end">#0F3460</color>
 
     <!-- Neon Theme -->
     <color name="neon_primary">#0D0221</color>

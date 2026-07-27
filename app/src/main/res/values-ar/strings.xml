@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BlackBox Pro</string>
+    <string name="app_name">Blackbox Ultra</string>
     <string name="choose">اختر</string>
     <string name="choose_app">اختر تطبيقاً</string>
     <string name="installed_app">التطبيقات المثبتة</string>
@@ -37,7 +37,7 @@
     <string name="app_shortcut">إنشاء اختصار</string>
     <string name="shortcut_name">اسم الاختصار</string>
     <string name="try_add_shortcut">تمت المحاولة لإضافته إلى سطح المكتب</string>
-    <string name="add_shortcut_fail_msg">إذا فشلت الإضافة، يرجى الذهاب إلى إعدادات النظام وفتح صلاحية "إنشاء اختصار سطح المكتب" لـ BlackBox Pro</string>
+    <string name="add_shortcut_fail_msg">إذا فشلت الإضافة، يرجى الذهاب إلى إعدادات النظام وفتح صلاحية "إنشاء اختصار سطح المكتب" لـ Blackbox Ultra</string>
     <string name="install_success">تم التثبيت بنجاح</string>
     <string name="install_fail">فشل التثبيت: %s</string>
     <string name="install_fail_no_msg">فشل التثبيت</string>
@@ -72,7 +72,7 @@
     <string name="theme_setting">الوضع الداكن</string>
     <string name="theme_setting_summary">تبديل مظهر الوضع الداكن</string>
     <string name="about">حول</string>
-    <string name="about_summary">BlackBox Pro - محرك افتراضي</string>
+    <string name="about_summary">Blackbox Ultra - محرك افتراضي</string>
     <string name="version">الإصدار %s</string>
     <string name="language_system">النظام الافتراضي</string>
     <string name="language_en">الإنجليزية</string>

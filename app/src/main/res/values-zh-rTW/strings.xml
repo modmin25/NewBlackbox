@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BlackBox Pro</string>
+    <string name="app_name">Blackbox Ultra</string>
     <string name="choose">手動選擇</string>
     <string name="choose_app">選擇應用程序</string>
     <string name="installed_app">已安裝的應用程序</string>
@@ -36,7 +36,7 @@
     <string name="app_shortcut">創建快捷方式</string>
     <string name="shortcut_name">快捷方式名稱</string>
     <string name="try_add_shortcut">嘗試添加到桌面</string>
-    <string name="add_shortcut_fail_msg">如果添加失敗，請轉到系統設置並打開BlackBox Pro的"創建桌面快捷方式"許可權</string>
+    <string name="add_shortcut_fail_msg">如果添加失敗，請轉到系統設置並打開Blackbox Ultra的"創建桌面快捷方式"許可權</string>
     <string name="install_success">安裝成功</string>
     <string name="install_fail">安裝失敗：%s</string>
     <string name="install_fail_no_msg">安裝失敗</string>
@@ -71,7 +71,7 @@
     <string name="theme_setting">深色主題</string>
     <string name="theme_setting_summary">切換深色模式外觀</string>
     <string name="about">關於</string>
-    <string name="about_summary">BlackBox Pro - 虛擬引擎</string>
+    <string name="about_summary">Blackbox Ultra - 虛擬引擎</string>
     <string name="version">版本 %s</string>
     <string name="language_system">跟隨系統</string>
     <string name="language_en">英語</string>

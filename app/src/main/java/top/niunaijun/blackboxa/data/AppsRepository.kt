@@ -113,7 +113,10 @@ class AppsRepository {
                                         ), 
                                         installedApplication.packageName,
                                         installedApplication.sourceDir,
-                                        isXpModule
+                                        isXpModule,
+                                        0,
+                                        "",
+                                        1
                                 )
                         installedList.add(info)
                     } catch (e: Exception) {
@@ -275,6 +278,13 @@ class AppsRepository {
                         return@forEachIndexed
                     }
 
+                    val versionName = try {
+                        val pkgInfo = blackBoxCore.getPackageManager().getPackageInfo(applicationInfo.packageName, 0)
+                        pkgInfo?.versionName ?: ""
+                    } catch (e: Exception) {
+                        ""
+                    }
+
                     val info =
                             AppInfo(
                                     safeLoadAppLabel(applicationInfo),
@@ -283,7 +293,10 @@ class AppsRepository {
                                     ), 
                                     applicationInfo.packageName,
                                     applicationInfo.sourceDir ?: "",
-                                    false
+                                    false,
+                                    userId,
+                                    versionName,
+                                    1
                             )
 
                     appInfoList.add(info)

@@ -1,42 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/card_bg"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingTop="16dp">
+        android:paddingTop="14dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
 
-    <FrameLayout
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-        <ImageView
+            <ImageView
                 android:id="@+id/icon"
-                android:layout_width="48dp"
-                android:layout_height="48dp" />
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:scaleType="centerCrop" />
 
-        <com.othershe.cornerlabelview.CornerLabelView
+            <View
+                android:id="@+id/statusIndicator"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/ic_status_running" />
+
+            <com.othershe.cornerlabelview.CornerLabelView
                 android:id="@+id/cornerLabel"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_gravity="top|start"
                 android:visibility="invisible"
-                app:bg_color="@color/primary"
+                app:bg_color="@color/accent"
                 app:position="left_top"
                 app:side_length="22dp"
                 app:text="XP"
                 app:text_color="@color/white"
                 app:text_size="8sp" />
-    </FrameLayout>
+        </FrameLayout>
 
-    <TextView
+        <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="6dp"
             android:textColor="@color/primary_text"
-            android:textSize="12sp" />
+            android:textSize="11sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium" />
 
+        <TextView
+            android:id="@+id/versionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/secondary_text"
+            android:textSize="9sp"
+            android:visibility="gone"
+            android:gravity="center" />
 
-</LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
