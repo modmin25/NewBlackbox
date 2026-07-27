@@ -2,11 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <item
             android:id="@+id/main_setting"
             android:title="@string/setting"
             app:showAsAction="never" />
+
+    <item
+        android:id="@+id/virtual_camera"
+        android:title="@string/virtual_camera_title"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/kill_all_apps"
+        android:title="@string/kill_all_apps"
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/fake_location"

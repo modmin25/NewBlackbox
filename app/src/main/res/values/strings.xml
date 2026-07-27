@@ -152,4 +152,29 @@
     <string name="virtual_camera_status_disabled">Status: Camera disabled</string>
     <string name="virtual_camera_status_local">Status: Using local video</string>
     <string name="virtual_camera_status_network">Status: Using network video</string>
+
+    <!-- Welcome -->
+    <string name="welcome_tagline">Virtual Engine \u00B7 Privacy \u00B7 Freedom</string>
+
+    <!-- App Management -->
+    <string name="kill_all_apps">Kill All Apps</string>
+    <string name="kill_all_apps_hint">Stop all running virtual apps?</string>
+    <string name="kill_all_apps_done">All apps stopped</string>
+    <string name="search_apps">Search apps...</string>
+    <string name="no_apps_installed">No apps installed yet.\nTap + to add an app.</string>
+    <string name="drag_to_reorder">Drag to reorder</string>
+    <string name="app_running">Running</string>
+
+    <!-- Camera Filters -->
+    <string name="filter_none">None</string>
+    <string name="filter_grayscale">Grayscale</string>
+    <string name="filter_sepia">Sepia</string>
+    <string name="filter_invert">Invert Colors</string>
+    <string name="filter_brightness">Brightness</string>
+    <string name="filter_contrast">Contrast</string>
+    <string name="filter_blur">Blur</string>
+    <string name="virtual_camera_filters">Filters</string>
+    <string name="virtual_camera_loop">Loop Video</string>
+    <string name="virtual_camera_preview_size">Preview Size</string>
+    <string name="virtual_camera_resolution">Resolution</string>
 </resources>

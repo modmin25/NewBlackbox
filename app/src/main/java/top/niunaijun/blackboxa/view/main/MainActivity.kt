@@ -137,7 +137,7 @@ class MainActivity : LoadingActivity() {
         val headerView = navView.getHeaderView(0)
         headerView?.let {
             it.findViewById<TextView>(R.id.nav_header_title)?.text = getString(R.string.app_name)
-            it.findViewById<TextView>(R.id.nav_header_subtitle)?.text = getString(R.string.version, "8.0.0")
+            it.findViewById<TextView>(R.id.nav_header_subtitle)?.text = getString(R.string.version, "9.0.0")
         }
     }
 
@@ -514,11 +514,41 @@ class MainActivity : LoadingActivity() {
                     intent.putExtra("userID", 0)
                     startActivity(intent)
                 }
+                R.id.virtual_camera -> {
+                    startActivity(Intent(this, VirtualCameraActivity::class.java))
+                }
+                R.id.kill_all_apps -> {
+                    MaterialDialog(this).show {
+                        title(text = getString(R.string.kill_all_apps))
+                        message(text = getString(R.string.kill_all_apps_hint))
+                        positiveButton(text = getString(R.string.done)) {
+                            killAllVirtualApps()
+                        }
+                        negativeButton(text = getString(R.string.cancel))
+                    }
+                }
             }
             return true
         } catch (e: Exception) {
             Log.e(TAG, "Error handling menu item selection: ${e.message}")
             return false
+        }
+    }
+
+    private fun killAllVirtualApps() {
+        try {
+            val installed = BlackBoxCore.get().getInstalledApplications(0, 0)
+            var count = 0
+            for (appInfo in installed) {
+                try {
+                    BlackBoxCore.get().stopPackage(appInfo.packageName, 0)
+                    count++
+                } catch (_: Exception) {}
+            }
+            Toast.makeText(this, "${getString(R.string.kill_all_apps_done)} ($count)", Toast.LENGTH_SHORT).show()
+            refreshCurrentApps()
+        } catch (e: Exception) {
+            Log.e(TAG, "Error killing all apps: ${e.message}")
         }
     }
 }

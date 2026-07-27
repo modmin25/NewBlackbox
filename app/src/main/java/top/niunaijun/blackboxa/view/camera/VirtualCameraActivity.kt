@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -20,15 +21,14 @@ class VirtualCameraActivity : AppCompatActivity() {
         ActivityResultContracts.GetContent()
     ) { uri: Uri? ->
         uri?.let {
-            try {
-                contentResolver.takePersistableUriPermission(
-                    it,
-                    Intent.FLAG_GRANT_READ_URI_PERMISSION
-                )
-            } catch (_: SecurityException) {
+            val localPath = VirtualCameraManager.copyVideoToInternal(this, it)
+            if (localPath != null) {
+                VirtualCameraManager.setVideoUri(this, it.toString())
+                VirtualCameraManager.setVideoPath(this, localPath)
+                binding.tvVideoPath.text = it.lastPathSegment ?: it.toString()
+            } else {
+                Toast.makeText(this, "Failed to copy video", Toast.LENGTH_SHORT).show()
             }
-            VirtualCameraManager.setVideoUri(this, it.toString())
-            binding.tvVideoPath.text = it.lastPathSegment ?: it.toString()
         }
     }
 
@@ -41,8 +41,23 @@ class VirtualCameraActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        setupFilterSpinner()
         loadCurrentSettings()
         setupListeners()
+    }
+
+    private fun setupFilterSpinner() {
+        val filters = arrayOf(
+            getString(R.string.filter_none),
+            getString(R.string.filter_grayscale),
+            getString(R.string.filter_sepia),
+            getString(R.string.filter_invert),
+            getString(R.string.filter_brightness),
+            getString(R.string.filter_contrast),
+            getString(R.string.filter_blur)
+        )
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, filters)
+        binding.spinnerFilter.adapter = adapter
     }
 
     private fun loadCurrentSettings() {
@@ -64,6 +79,8 @@ class VirtualCameraActivity : AppCompatActivity() {
         }
 
         binding.switchAudio.isChecked = VirtualCameraManager.isAudioEnabled(this)
+        binding.switchLoop.isChecked = VirtualCameraManager.isLoopVideo(this)
+        binding.spinnerFilter.setSelection(VirtualCameraManager.getFilter(this))
         updateStatusText(mode)
     }
 
@@ -91,11 +108,13 @@ class VirtualCameraActivity : AppCompatActivity() {
     private fun updateVisibility(mode: Int) {
         val showLocal = mode == VirtualCameraManager.MODE_LOCAL
         val showNetwork = mode == VirtualCameraManager.MODE_NETWORK
-        val showAudio = mode != VirtualCameraManager.MODE_OFF
+        val showExtra = mode != VirtualCameraManager.MODE_OFF
 
         binding.cardLocal.visibility = if (showLocal) android.view.View.VISIBLE else android.view.View.GONE
         binding.cardNetwork.visibility = if (showNetwork) android.view.View.VISIBLE else android.view.View.GONE
-        binding.cardAudio.visibility = if (showAudio) android.view.View.VISIBLE else android.view.View.GONE
+        binding.cardAudio.visibility = if (showExtra) android.view.View.VISIBLE else android.view.View.GONE
+        binding.cardLoop.visibility = if (showExtra) android.view.View.VISIBLE else android.view.View.GONE
+        binding.cardFilter.visibility = if (showExtra) android.view.View.VISIBLE else android.view.View.GONE
     }
 
     private fun saveSettings() {
@@ -123,6 +142,8 @@ class VirtualCameraActivity : AppCompatActivity() {
 
         VirtualCameraManager.setCameraMode(this, mode)
         VirtualCameraManager.setAudioEnabled(this, binding.switchAudio.isChecked)
+        VirtualCameraManager.setLoopVideo(this, binding.switchLoop.isChecked)
+        VirtualCameraManager.setFilter(this, binding.spinnerFilter.selectedItemPosition)
 
         updateStatusText(mode)
         Toast.makeText(this, R.string.virtual_camera_saved, Toast.LENGTH_SHORT).show()
