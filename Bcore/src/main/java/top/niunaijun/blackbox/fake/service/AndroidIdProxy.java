@@ -156,9 +156,14 @@ public class AndroidIdProxy extends ClassInvocationStub {
         }
     }
 
-    
     private static String generateMockAndroidId() {
-        
+        return generateMockAndroidIdForPackage(null);
+    }
+
+    public static String generateMockAndroidIdForPackage(String pkgName) {
+        if (pkgName != null && !pkgName.isEmpty()) {
+            return SpoofProvider.getSpoofedAndroidId(pkgName);
+        }
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 16; i++) {
             sb.append(Integer.toHexString((int) (Math.random() * 16)));

@@ -177,4 +177,57 @@
     <string name="virtual_camera_loop">Loop Video</string>
     <string name="virtual_camera_preview_size">Preview Size</string>
     <string name="virtual_camera_resolution">Resolution</string>
+
+    <!-- Spoof Manager -->
+    <string name="spoof_manager_title">Device Identity Spoof</string>
+    <string name="spoof_manager_summary">Per-app custom IMEI, Android ID, MAC, and device model</string>
+    <string name="spoof_enable_spoofing">Enable Identity Spoofing</string>
+    <string name="spoof_identity">Identity</string>
+    <string name="spoof_device_info">Device Info</string>
+    <string name="spoof_imei">IMEI</string>
+    <string name="spoof_android_id">Android ID</string>
+    <string name="spoof_mac_address">MAC Address</string>
+    <string name="spoof_serial_number">Serial Number</string>
+    <string name="spoof_sim_serial">SIM Serial</string>
+    <string name="spoof_phone_number">Phone Number</string>
+    <string name="spoof_model">Model</string>
+    <string name="spoof_manufacturer">Manufacturer</string>
+    <string name="spoof_brand">Brand</string>
+    <string name="spoof_device_name">Device</string>
+    <string name="spoof_fingerprint">Fingerprint</string>
+    <string name="spoof_hardware">Hardware</string>
+    <string name="spoof_generate">Generate Random</string>
+    <string name="spoof_save">Save Configuration</string>
+    <string name="spoof_reset">Reset to Default</string>
+    <string name="spoof_saved">Configuration saved</string>
+    <string name="spoof_reset_done">Reset to default</string>
+    <string name="spoof_no_package">No package specified</string>
+    <string name="spoof_presets">Device Presets</string>
+    <string name="spoof_apply_preset">Apply Preset</string>
+    <string name="spoof_preset_applied">Applied preset: %s</string>
+    <string name="spoof_select_app">Select an app to configure spoofing</string>
+
+    <!-- Privacy Shield -->
+    <string name="privacy_shield">Privacy Shield</string>
+    <string name="privacy_shield_active">Privacy Shield active - blocking detection</string>
+    <string name="privacy_shield_desc">Bypass SafetyNet, Play Integrity, and anti-virtual detection</string>
+
+    <!-- Floating Overlay -->
+    <string name="overlay_start">Start Floating Overlay</string>
+    <string name="overlay_stop">Stop Floating Overlay</string>
+    <string name="overlay_started">Floating overlay started</string>
+    <string name="overlay_stopped">Floating overlay stopped</string>
+
+    <!-- GMS Enhanced -->
+    <string name="gms_install_play_store">Install Play Store</string>
+    <string name="gms_install_play_store_hint">Install Google Play Store to download apps inside the virtual space.</string>
+    <string name="gms_play_store_installed">Play Store installed</string>
+    <string name="gms_play_store_removed">Play Store removed</string>
+    <string name="gms_status_installed">Installed</string>
+    <string name="gms_status_not_installed">Not Installed</string>
+
+    <!-- Navigation -->
+    <string name="nav_spoof_manager">Device Spoof</string>
+    <string name="nav_privacy_shield">Privacy Shield</string>
+    <string name="nav_floating_overlay">Floating Overlay</string>
 </resources>

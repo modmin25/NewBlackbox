@@ -48,9 +48,8 @@ public class ITelephonyManagerProxy extends BinderInvocationStub {
     public static class GetDeviceId extends MethodHook {
         @Override
         protected Object hook(Object who, Method method, Object[] args) throws Throwable {
-
-
-            return Md5Utils.md5(BlackBoxCore.getHostPkg());
+            String pkgName = top.niunaijun.blackbox.app.BActivityThread.getAppPackageName();
+            return SpoofProvider.getSpoofedImei(pkgName);
         }
     }
 
@@ -58,9 +57,8 @@ public class ITelephonyManagerProxy extends BinderInvocationStub {
     public static class getImeiForSlot extends MethodHook {
         @Override
         protected Object hook(Object who, Method method, Object[] args) throws Throwable {
-
-
-            return Md5Utils.md5(BlackBoxCore.getHostPkg());
+            String pkgName = top.niunaijun.blackbox.app.BActivityThread.getAppPackageName();
+            return SpoofProvider.getSpoofedImei(pkgName);
         }
     }
 
@@ -68,9 +66,8 @@ public class ITelephonyManagerProxy extends BinderInvocationStub {
     public static class GetMeidForSlot extends MethodHook {
         @Override
         protected Object hook(Object who, Method method, Object[] args) throws Throwable {
-
-
-            return Md5Utils.md5(BlackBoxCore.getHostPkg());
+            String pkgName = top.niunaijun.blackbox.app.BActivityThread.getAppPackageName();
+            return SpoofProvider.getSpoofedImei(pkgName);
         }
     }
 
@@ -83,19 +80,12 @@ public class ITelephonyManagerProxy extends BinderInvocationStub {
     }
 
 
-    @ProxyMethod("getLine1NumberForDisplay")
-    public static class getLine1NumberForDisplay extends MethodHook {
-        @Override
-        protected Object hook(Object who, Method method, Object[] args) throws Throwable {
-            return null;
-        }
-    }
-
     @ProxyMethod("getSubscriberId")
     public static class GetSubscriberId extends MethodHook {
         @Override
         protected Object hook(Object who, Method method, Object[] args) throws Throwable {
-            return Md5Utils.md5(BlackBoxCore.getHostPkg());
+            String pkgName = top.niunaijun.blackbox.app.BActivityThread.getAppPackageName();
+            return SpoofProvider.getSpoofedImei(pkgName);
         }
     }
 
@@ -103,7 +93,18 @@ public class ITelephonyManagerProxy extends BinderInvocationStub {
     public static class GetDeviceIdWithFeature extends MethodHook {
         @Override
         protected Object hook(Object who, Method method, Object[] args) throws Throwable {
-            return Md5Utils.md5(BlackBoxCore.getHostPkg());
+            String pkgName = top.niunaijun.blackbox.app.BActivityThread.getAppPackageName();
+            return SpoofProvider.getSpoofedImei(pkgName);
+        }
+    }
+
+    @ProxyMethod("getLine1NumberForDisplay")
+    public static class getLine1NumberForDisplay extends MethodHook {
+        @Override
+        protected Object hook(Object who, Method method, Object[] args) throws Throwable {
+            String pkgName = top.niunaijun.blackbox.app.BActivityThread.getAppPackageName();
+            String phone = SpoofProvider.getSpoofedPhoneNumber(pkgName);
+            return phone != null ? phone : null;
         }
     }
 

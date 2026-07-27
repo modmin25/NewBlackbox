@@ -13,6 +13,11 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/spoof_manager"
+        android:title="@string/nav_spoof_manager"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/kill_all_apps"
         android:title="@string/kill_all_apps"
         app:showAsAction="never" />

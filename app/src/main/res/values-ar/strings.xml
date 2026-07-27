@@ -102,4 +102,71 @@
     <string name="virtual_camera_status_disabled">الحالة: الكاميرا معطلة</string>
     <string name="virtual_camera_status_local">الحالة: استخدام فيديو محلي</string>
     <string name="virtual_camera_status_network">الحالة: استخدام فيديو عبر الشبكة</string>
+    <string name="virtual_camera_filters">الفلاتر</string>
+    <string name="virtual_camera_loop">تكرار الفيديو</string>
+    <string name="virtual_camera_preview_size">حجم المعاينة</string>
+    <string name="virtual_camera_resolution">الدقة</string>
+
+    <!-- Spoof Manager -->
+    <string name="spoof_manager_title">تزييف هوية الجهاز</string>
+    <string name="spoof_manager_summary">IMEI مخصص و Android ID و MAC و طراز الجهاز لكل تطبيق</string>
+    <string name="spoof_enable_spoofing">تفعيل تزييف الهوية</string>
+    <string name="spoof_identity">الهوية</string>
+    <string name="spoof_device_info">معلومات الجهاز</string>
+    <string name="spoof_imei">IMEI</string>
+    <string name="spoof_android_id">Android ID</string>
+    <string name="spoof_mac_address">عنوان MAC</string>
+    <string name="spoof_serial_number">الرقم التسلسلي</string>
+    <string name="spoof_sim_serial">الرقم التسلسلي للشريحة</string>
+    <string name="spoof_phone_number">رقم الهاتف</string>
+    <string name="spoof_model">الطراز</string>
+    <string name="spoof_manufacturer">الشركة المصنعة</string>
+    <string name="spoof_brand">العلامة التجارية</string>
+    <string name="spoof_device_name">الجهاز</string>
+    <string name="spoof_fingerprint">البصمة</string>
+    <string name="spoof_hardware">العتاد</string>
+    <string name="spoof_generate">إنشاء عشوائي</string>
+    <string name="spoof_save">حفظ الإعدادات</string>
+    <string name="spoof_reset">إعادة تعيين</string>
+    <string name="spoof_saved">تم حفظ الإعدادات</string>
+    <string name="spoof_reset_done">تمت إعادة التعيين</string>
+    <string name="spoof_no_package">لم يتم تحديد حزمة</string>
+    <string name="spoof_presets">الإعدادات المسبقة للجهاز</string>
+    <string name="spoof_apply_preset">تطبيق الإعداد المسبق</string>
+    <string name="spoof_preset_applied">تم تطبيق: %s</string>
+    <string name="spoof_select_app">اختر تطبيقاً لتكوين التزييف</string>
+
+    <!-- Privacy Shield -->
+    <string name="privacy_shield">درع الخصوصية</string>
+    <string name="privacy_shield_active">درع الخصوصية نشط - حجب الكشف</string>
+    <string name="privacy_shield_desc">تجاوز SafetyNet و Play Integrity وكشف البيئة الافتراضية</string>
+
+    <!-- Floating Overlay -->
+    <string name="overlay_start">تشغيل الطفو العائم</string>
+    <string name="overlay_stop">إيقاف الطفو العائم</string>
+    <string name="overlay_started">تم تشغيل الطفو العائم</string>
+    <string name="overlay_stopped">تم إيقاف الطفو العائم</string>
+
+    <!-- GMS Enhanced -->
+    <string name="gms_install_play_store">تثبيت متجر Play</string>
+    <string name="gms_install_play_store_hint">تثبيت متجر Google Play لتنزيل التطبيقات داخل المساحة الافتراضية.</string>
+    <string name="gms_play_store_installed">تم تثبيت متجر Play</string>
+    <string name="gms_play_store_removed">تم إزالة متجر Play</string>
+    <string name="gms_status_installed">مثبت</string>
+    <string name="gms_status_not_installed">غير مثبت</string>
+
+    <!-- Navigation -->
+    <string name="nav_spoof_manager">تزييف الجهاز</string>
+    <string name="nav_privacy_shield">درع الخصوصية</string>
+    <string name="nav_floating_overlay">الطفو العائم</string>
+
+    <!-- App Management -->
+    <string name="kill_all_apps">إيقاف جميع التطبيقات</string>
+    <string name="kill_all_apps_hint">هل تريد إيقاف جميع التطبيقات الافتراضية العاملة؟</string>
+    <string name="kill_all_apps_done">تم إيقاف جميع التطبيقات</string>
+    <string name="welcome_tagline">محرك افتراضي \u00B7 خصوصية \u00B7 حرية</string>
+    <string name="search_apps">بحث في التطبيقات...</string>
+    <string name="no_apps_installed">لا توجد تطبيقات مثبتة.\nاضغط + لإضافة تطبيق.</string>
+    <string name="drag_to_reorder">اسحب لإعادة الترتيب</string>
+    <string name="app_running">يعمل</string>
 </resources>

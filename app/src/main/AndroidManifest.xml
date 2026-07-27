@@ -67,5 +67,11 @@
             android:exported="false"
             android:foregroundServiceType="specialUse" />
 
+        <service
+            android:name=".view.tools.FloatingOverlayService"
+            android:exported="false" />
+
+        <activity android:name=".view.spoof.SpoofManagerActivity" />
+
     </application>
 </manifest>

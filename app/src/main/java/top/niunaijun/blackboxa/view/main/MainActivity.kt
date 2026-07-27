@@ -34,6 +34,8 @@ import top.niunaijun.blackboxa.view.list.ListActivity
 import top.niunaijun.blackboxa.view.setting.SettingActivity
 import top.niunaijun.blackboxa.view.store.StoreActivity
 import top.niunaijun.blackboxa.view.camera.VirtualCameraActivity
+import top.niunaijun.blackboxa.view.spoof.SpoofManagerActivity
+import top.niunaijun.blackboxa.view.tools.FloatingOverlayService
 
 class MainActivity : LoadingActivity() {
 
@@ -120,11 +122,21 @@ class MainActivity : LoadingActivity() {
                 R.id.nav_virtual_camera -> {
                     startActivity(Intent(this, VirtualCameraActivity::class.java))
                 }
+                R.id.nav_spoof_manager -> {
+                    startActivity(Intent(this, SpoofManagerActivity::class.java).apply {
+                        putExtra("package_name", "com.whatsapp")
+                    })
+                }
                 R.id.nav_memory_booster -> {
                     Toast.makeText(this, R.string.memory_booster_started, Toast.LENGTH_SHORT).show()
                 }
                 R.id.nav_privacy_guard -> {
-                    Toast.makeText(this, R.string.privacy_guard_active, Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, R.string.privacy_shield_active, Toast.LENGTH_SHORT).show()
+                }
+                R.id.nav_floating_overlay -> {
+                    val serviceIntent = Intent(this, FloatingOverlayService::class.java)
+                    startService(serviceIntent)
+                    Toast.makeText(this, R.string.overlay_started, Toast.LENGTH_SHORT).show()
                 }
                 R.id.nav_settings -> {
                     SettingActivity.start(this)
@@ -137,7 +149,7 @@ class MainActivity : LoadingActivity() {
         val headerView = navView.getHeaderView(0)
         headerView?.let {
             it.findViewById<TextView>(R.id.nav_header_title)?.text = getString(R.string.app_name)
-            it.findViewById<TextView>(R.id.nav_header_subtitle)?.text = getString(R.string.version, "9.0.0")
+            it.findViewById<TextView>(R.id.nav_header_subtitle)?.text = getString(R.string.version, "10.0.0")
         }
     }
 
@@ -506,7 +518,7 @@ class MainActivity : LoadingActivity() {
                     SettingActivity.start(this)
                 }
                 R.id.main_tg -> {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/blackbox_ultra"))
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/mohammedtahriyne"))
                     startActivity(intent)
                 }
                 R.id.fake_location -> {
@@ -516,6 +528,11 @@ class MainActivity : LoadingActivity() {
                 }
                 R.id.virtual_camera -> {
                     startActivity(Intent(this, VirtualCameraActivity::class.java))
+                }
+                R.id.spoof_manager -> {
+                    val intent = Intent(this, SpoofManagerActivity::class.java)
+                    intent.putExtra("package_name", "com.whatsapp")
+                    startActivity(intent)
                 }
                 R.id.kill_all_apps -> {
                     MaterialDialog(this).show {
