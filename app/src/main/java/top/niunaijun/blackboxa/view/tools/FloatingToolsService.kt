@@ -130,6 +130,16 @@ class FloatingToolsService : Service() {
                 Toast.makeText(App.getContext(), R.string.tool_app_cloner, Toast.LENGTH_SHORT).show()
                 toggleTools(false)
             }
+            view.findViewById<View>(R.id.btn_virtual_camera)?.setOnClickListener {
+                try {
+                    val intent = Intent(App.getContext(), top.niunaijun.blackboxa.view.camera.VirtualCameraActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    App.getContext().startActivity(intent)
+                } catch (e: Exception) {
+                    Toast.makeText(App.getContext(), R.string.virtual_camera_title, Toast.LENGTH_SHORT).show()
+                }
+                toggleTools(false)
+            }
             view.findViewById<View>(R.id.btn_file_manager)?.setOnClickListener {
                 Toast.makeText(App.getContext(), R.string.tool_file_manager, Toast.LENGTH_SHORT).show()
                 toggleTools(false)

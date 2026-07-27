@@ -177,21 +177,30 @@ class AppsFragment : Fragment() {
     override fun onStart() {
         try {
             super.onStart()
-            
-            
+
+
             try {
                 BlackBoxCore.get().addServiceAvailableCallback {
                     Log.d(TAG, "Services became available, refreshing app list")
-                    
+
                     viewModel.getInstalledAppsWithRetry(userID)
                 }
             } catch (e: Exception) {
                 Log.e(TAG, "Error registering service available callback: ${e.message}")
             }
-            
+
             viewModel.getInstalledAppsWithRetry(userID)
         } catch (e: Exception) {
             Log.e(TAG, "Error in onStart: ${e.message}")
+        }
+    }
+
+    override fun onResume() {
+        try {
+            super.onResume()
+            viewModel.getInstalledApps(userID)
+        } catch (e: Exception) {
+            Log.e(TAG, "Error in onResume: ${e.message}")
         }
     }
 
@@ -517,6 +526,14 @@ class AppsFragment : Fragment() {
         } catch (e: Exception) {
             Log.e(TAG, "Error installing APK: ${e.message}")
             hideLoading()
+        }
+    }
+
+    fun refreshApps() {
+        try {
+            viewModel.getInstalledApps(userID)
+        } catch (e: Exception) {
+            Log.e(TAG, "Error refreshing apps: ${e.message}")
         }
     }
 

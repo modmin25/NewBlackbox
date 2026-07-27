@@ -74,6 +74,8 @@ class MainActivity : LoadingActivity() {
             initDrawer()
             initViewPager()
             initFab()
+            initCameraFab()
+            initSwipeRefresh()
             initToolbarSubTitle()
 
             checkStoragePermission()
@@ -368,14 +370,66 @@ class MainActivity : LoadingActivity() {
         }
     }
 
+    private fun initCameraFab() {
+        try {
+            viewBinding.fabCamera.setOnClickListener {
+                try {
+                    startActivity(Intent(this, VirtualCameraActivity::class.java))
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error launching VirtualCameraActivity: ${e.message}")
+                }
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error in initCameraFab: ${e.message}")
+        }
+    }
+
+    private fun initSwipeRefresh() {
+        try {
+            viewBinding.swipeRefresh.setOnRefreshListener {
+                try {
+                    refreshCurrentApps()
+                    viewBinding.swipeRefresh.isRefreshing = false
+                } catch (e: Exception) {
+                    Log.e(TAG, "Error in swipe refresh: ${e.message}")
+                    viewBinding.swipeRefresh.isRefreshing = false
+                }
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error in initSwipeRefresh: ${e.message}")
+        }
+    }
+
+    private fun refreshCurrentApps() {
+        try {
+            val position = viewBinding.viewPager.currentItem
+            if (position < fragmentList.size) {
+                fragmentList[position].refreshApps()
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Error refreshing apps: ${e.message}")
+        }
+    }
+
+    override fun onResume() {
+        try {
+            super.onResume()
+            refreshCurrentApps()
+        } catch (e: Exception) {
+            Log.e(TAG, "Error in onResume: ${e.message}")
+        }
+    }
+
     fun showFloatButton(show: Boolean) {
         try {
             val tranY: Float = Resolution.convertDpToPixel(120F, App.getContext())
             val time = 200L
             if (show) {
                 viewBinding.fab.animate().translationY(0f).alpha(1f).setDuration(time).start()
+                viewBinding.fabCamera.animate().translationY(0f).alpha(1f).setDuration(time).start()
             } else {
                 viewBinding.fab.animate().translationY(tranY).alpha(0f).setDuration(time).start()
+                viewBinding.fabCamera.animate().translationY(tranY).alpha(0f).setDuration(time).start()
             }
         } catch (e: Exception) {
             Log.e(TAG, "Error in showFloatButton: ${e.message}")

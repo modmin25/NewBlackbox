@@ -106,6 +106,7 @@
     <string name="tool_short_files">Files</string>
     <string name="tool_short_boost">Boost</string>
     <string name="tool_short_privacy">Privacy</string>
+    <string name="tool_short_camera">Camera</string>
 
     <!-- Tools -->
     <string name="memory_booster">Memory Booster</string>

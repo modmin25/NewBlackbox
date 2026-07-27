@@ -47,6 +47,30 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/btn_virtual_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_nav_camera"
+                android:contentDescription="@string/virtual_camera_title" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tool_short_camera"
+                android:textColor="@color/primary_text"
+                android:textSize="10sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/btn_file_manager"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
