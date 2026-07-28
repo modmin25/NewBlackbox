@@ -78,6 +78,8 @@
 
     <!-- Sunset Theme -->
     <color name="sunset_primary">#2D1B2E</color>
+    
+    <color name="black">#FF000000</color>
     <color name="sunset_primary_dark">#1E0F1F</color>
     <color name="sunset_accent">#FF7B54</color>
     <color name="sunset_status_bar">#140715</color>
