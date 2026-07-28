@@ -1,82 +1,71 @@
-# BlackBox Pro - Virtual Engine
+# Blackbox Prime v11.0.0 - Mastermind Edition
 
-<p align="center">
-  <img src="assets/usage.gif" alt="BlackBox Pro Banner" width="100%"/>
-</p>
+> **Advanced Virtual Engine | App Cloner | Privacy Suite**
 
-**BlackBox Pro** is a premium virtual engine that allows you to clone and run virtual applications on Android devices without installing APKs. This project works on Android 5.0 to 14.0+ and supports multiple architectures (ARM64, ARMv7, x86).
+[![Build APK](https://github.com/modmin25/NewBlackbox/actions/workflows/build-apk.yml/badge.svg)](https://github.com/modmin25/NewBlackbox/actions/workflows/build-apk.yml)
+[![Telegram](https://img.shields.io/badge/Telegram-Channel-blue?logo=telegram)](https://t.me/mohammedtahriyne)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-11.0.0--Mastermind-brightgreen)]()
 
-## Overview
+---
 
-This enhanced edition includes bug fixes, stability improvements, Android 14+ compatibility, a modern dark-themed UI, and multi-language support.
+## Features
 
-### Key Features
+- **Virtual Engine** - Run multiple accounts of any app in isolated sandboxes
+- **Virtual Camera** - Inject custom video into camera apps (WhatsApp, Telegram, Messenger)
+- **Device Spoofing** - Change IMEI, Android ID, MAC, device model per app
+- **Fake GPS** - Set custom location per cloned app with interactive map
+- **Privacy Shield** - Bypass SafetyNet, Play Integrity, and anti-virtual detection
+- **Memory Booster** - Clean up virtual app cache and processes
+- **Multi-Account** - Clone the same app multiple times with isolated storage
+- **GMS Support** - Google Play Services integration for GMS-dependent apps
+- **Xposed Framework** - Support for Xposed modules inside virtual environment
+- **Floating Tools** - Quick-access floating toolbar overlay
+- **Cyberpunk UI** - Dark glassmorphism theme with neon accents
+- **RTL Support** - Full Arabic language support with RTL layout
 
-*   **Virtual App Cloning**: Run multiple instances of applications.
-*   **Sandboxed Environment**: Isolated process execution.
-*   **No Root Required**: Runs entirely in userspace.
-*   **Multi-Architecture**: Support for 32-bit and 64-bit apps.
-*   **Device Spoofing**: Modify device information for virtual apps.
-*   **Fake Location**: Spoof GPS coordinates.
-*   **Modern Dark UI**: Premium dark-themed interface with smooth animations.
-*   **Multi-Language Support**: English, Arabic, Spanish, French, Chinese (Simplified & Traditional).
-*   **Language Switching**: Change app language from Settings.
-*   **Xposed Framework**: Built-in Xposed module support.
-*   **GMS Support**: Google Mobile Services management.
+## Screenshots
+
+*Coming soon*
+
+## Download
+
+Get the latest APK from [GitHub Releases](https://github.com/modmin25/NewBlackbox/releases).
+
+## Build
+
+```bash
+git clone https://github.com/modmin25/NewBlackbox.git
+cd NewBlackbox
+chmod +x gradlew
+./gradlew assembleDebug
+```
 
 ## Requirements
 
-*   **Android Version**: Android 5.0 (API 21) or higher.
-*   **RAM**: 2GB minimum recommended.
-*   **Architecture**: ARMv7a, ARM64-v8a.
+- Android 5.0+ (API 21)
+- 4GB+ RAM recommended
+- Storage access permission for app installation
 
-## Build Instructions
+## Social
 
-### Prerequisites
-*   Android Studio (Arctic Fox or newer)
-*   JDK 21
-*   Android SDK 35+
-*   NDK (Version 29.0.13846066)
-
-### Building from Source
-
-```bash
-# Clone the repository
-git clone https://github.com/modmin25/NewBlackbox.git
-cd NewBlackbox
-
-# Build Debug APK
-./gradlew assembleDebug
-
-# Build Release APK
-./gradlew assembleRelease
-```
-
-## CI/CD
-
-This project uses GitHub Actions for automated builds. Push to `main` or use workflow_dispatch to trigger a build.
-
-The workflow produces `app-debug.apk` artifacts available for download from the Actions tab.
-
-## Credits
-
-*   **Main Developer**: ALEX502
-*   **Original Framework**: VirtualApp, VirtualAPK
-*   **Native Hooks**: Dobby, xDL
-*   **Reflection**: BlackReflection, FreeReflection
+- **Telegram**: [https://t.me/mohammedtahriyne](https://t.me/mohammedtahriyne)
+- **GitHub**: [https://github.com/modmin25/NewBlackbox](https://github.com/modmin25/NewBlackbox)
 
 ## License
 
-Copyright 2024 BlackBox Pro
+```
+Copyright 2024-2026 Blackbox Prime
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-   http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+```

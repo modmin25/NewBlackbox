@@ -80,6 +80,8 @@ class VirtualCameraActivity : AppCompatActivity() {
 
         binding.switchAudio.isChecked = VirtualCameraManager.isAudioEnabled(this)
         binding.switchLoop.isChecked = VirtualCameraManager.isLoopVideo(this)
+        binding.switchBinderHook.isChecked = VirtualCameraManager.isBinderHookEnabled(this)
+        binding.switchAvSync.isChecked = VirtualCameraManager.isAvSyncEnabled(this)
         binding.spinnerFilter.setSelection(VirtualCameraManager.getFilter(this))
         updateStatusText(mode)
     }
@@ -115,6 +117,8 @@ class VirtualCameraActivity : AppCompatActivity() {
         binding.cardAudio.visibility = if (showExtra) android.view.View.VISIBLE else android.view.View.GONE
         binding.cardLoop.visibility = if (showExtra) android.view.View.VISIBLE else android.view.View.GONE
         binding.cardFilter.visibility = if (showExtra) android.view.View.VISIBLE else android.view.View.GONE
+        binding.cardBinderHook.visibility = if (showExtra) android.view.View.VISIBLE else android.view.View.GONE
+        binding.cardAvSync.visibility = if (showExtra) android.view.View.VISIBLE else android.view.View.GONE
     }
 
     private fun saveSettings() {
@@ -144,6 +148,8 @@ class VirtualCameraActivity : AppCompatActivity() {
         VirtualCameraManager.setAudioEnabled(this, binding.switchAudio.isChecked)
         VirtualCameraManager.setLoopVideo(this, binding.switchLoop.isChecked)
         VirtualCameraManager.setFilter(this, binding.spinnerFilter.selectedItemPosition)
+        VirtualCameraManager.setBinderHookEnabled(this, binding.switchBinderHook.isChecked)
+        VirtualCameraManager.setAvSyncEnabled(this, binding.switchAvSync.isChecked)
 
         updateStatusText(mode)
         Toast.makeText(this, R.string.virtual_camera_saved, Toast.LENGTH_SHORT).show()

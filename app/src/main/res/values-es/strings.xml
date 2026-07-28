@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Blackbox Ultra</string>
+    <string name="app_name">Blackbox Prime</string>
     <string name="choose">Elegir</string>
     <string name="choose_app">Elegir App</string>
     <string name="installed_app">Apps Instaladas</string>
@@ -37,7 +37,7 @@
     <string name="app_shortcut">Crear Acceso Directo</string>
     <string name="shortcut_name">Nombre del Acceso Directo</string>
     <string name="try_add_shortcut">Intentado agregar al Escritorio</string>
-    <string name="add_shortcut_fail_msg">Si la adición falla, vaya a la configuración del sistema y abra el permiso de "crear acceso directo del escritorio" para Blackbox Ultra</string>
+    <string name="add_shortcut_fail_msg">Si la adición falla, vaya a la configuración del sistema y abra el permiso de "crear acceso directo del escritorio" para Blackbox Prime</string>
     <string name="install_success">Instalado Exitosamente</string>
     <string name="install_fail">Instalación Fallida: %s</string>
     <string name="install_fail_no_msg">Instalación Fallida</string>
@@ -72,7 +72,7 @@
     <string name="theme_setting">Modo Oscuro</string>
     <string name="theme_setting_summary">Alternar apariencia del modo oscuro</string>
     <string name="about">Acerca de</string>
-    <string name="about_summary">Blackbox Ultra - Motor Virtual</string>
+    <string name="about_summary">Blackbox Prime - Motor Virtual</string>
     <string name="version">Versión %s</string>
     <string name="language_system">Predeterminado del Sistema</string>
     <string name="language_en">Inglés</string>

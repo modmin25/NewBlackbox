@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Blackbox Ultra</string>
+    <string name="app_name">بلاك بوكس برايم</string>
     <string name="choose">اختر</string>
     <string name="choose_app">اختر تطبيقاً</string>
     <string name="installed_app">التطبيقات المثبتة</string>
@@ -9,8 +9,8 @@
     <string name="filter">تصفية</string>
     <string name="open_source_path">المصدر المفتوح</string>
     <string name="xp_setting">إعداد Xposed</string>
-    <string name="tg_group">مجموعة تيليجرام</string>
-    <string name="fake_location"> الموقع الوهمي (معاينة)</string>
+    <string name="tg_group">قناة تيليجرام</string>
+    <string name="fake_location">الموقع الوهمي</string>
     <string name="real_location">الموقع الحقيقي</string>
     <string name="set_location">تم تعيين الموقع الوهمي بنجاح:%1$s-%2$s</string>
     <string name="close_fake_location">تعطيل الموقع الوهمي</string>
@@ -21,7 +21,7 @@
     <string name="module_setting">مدير الوحدات</string>
     <string name="enable_xposed">تفعيل إطار Xposed</string>
     <string name="hider">إخفاء</string>
-    <string name="hide_root">إخفاء Root</string>
+    <string name="hide_root">إخفاء الجذر</string>
     <string name="hide_xposed">إخفاء Xposed</string>
     <string name="userRemark">ملاحظة المستخدم</string>
     <string name="done">تم</string>
@@ -36,15 +36,15 @@
     <string name="app_remove">إلغاء تثبيت التطبيق</string>
     <string name="app_shortcut">إنشاء اختصار</string>
     <string name="shortcut_name">اسم الاختصار</string>
-    <string name="try_add_shortcut">تمت المحاولة لإضافته إلى سطح المكتب</string>
-    <string name="add_shortcut_fail_msg">إذا فشلت الإضافة، يرجى الذهاب إلى إعدادات النظام وفتح صلاحية "إنشاء اختصار سطح المكتب" لـ Blackbox Ultra</string>
+    <string name="try_add_shortcut">تمت المحاولة للإضافة إلى سطح المكتب</string>
+    <string name="add_shortcut_fail_msg">إذا فشلت الإضافة، يرجى الذهاب إلى إعدادات النظام وفتح صلاحية إنشاء اختصار سطح المكتب لبلاك بوكس برايم</string>
     <string name="install_success">تم التثبيت بنجاح</string>
     <string name="install_fail">فشل التثبيت: %s</string>
     <string name="install_fail_no_msg">فشل التثبيت</string>
     <string name="uninstall_success">تم الإلغاء بنجاح</string>
     <string name="uninstall_fail">فشل الإلغاء</string>
     <string name="uninstall_app">إلغاء تثبيت التطبيق</string>
-    <string name="uninstall_app_hint">إلغاء تثبيت %s، وسيتم مسح البيانات ذات الصلة بعد الإلغاء؟</string>
+    <string name="uninstall_app_hint">إلغاء تثبيت %s، سيتم مسح البيانات ذات الصلة بعد الإلغاء؟</string>
     <string name="uninstall_module">إلغاء تثبيت الوحدة</string>
     <string name="uninstall_module_hint">هل تريد إلغاء تثبيت هذه الوحدة؟ لن تعمل بعد الإلغاء؟</string>
     <string name="remove_success">تمت الإزالة بنجاح</string>
@@ -55,34 +55,70 @@
     <string name="cannot_create_shortcut">سطح المكتب هذا لا يدعم إنشاء اختصارات</string>
     <string name="uninstall_module_toast">يرجى إلغاء تثبيت وحدة Xposed في مدير الوحدات</string>
     <string name="other">أخرى</string>
-    <string name="daemon_enable">العميل الخفي</string>
+    <string name="daemon_enable">الخدمة الخلفية</string>
     <string name="use_vpn_network">استخدام شبكة VPN</string>
-    <string name="use_vpn_network_summary">توجيه حركة المرور عبر VPN للتطبيقات المعزولة (قد يحسين الوصول للشبكة)</string>
-    <string name="disable_flag_secure">تعطيل تأمين العلامة</string>
-    <string name="disable_flag_secure_summary">السماح باللقطات وتسجيل الشاشة في التطبيقات</string>
-    <string name="gms_manager">مدير GMS</string>
-    <string name="jump_gms">الانتقال إلى مدير GMS</string>
+    <string name="use_vpn_network_summary">توجيه حركة المرور عبر VPN للتطبيقات المعزولة</string>
+    <string name="disable_flag_secure">تعطيل أمان العلامة</string>
+    <string name="disable_flag_secure_summary">السماح بالتقاط الشاشة والتسجيل في التطبيقات</string>
+    <string name="gms_manager">مدير خدمات Google</string>
+    <string name="jump_gms">الانتقال إلى مدير خدمات Google</string>
     <string name="enable_gms">تفعيل الخدمة</string>
-    <string name="enable_gms_hint">تفعيل خدمات Google يجعل YouTube والبرامج الأخرى التي تعتمد بشكل كبير على خدمات Google Play تعمل بشكل طبيعي.</string>
+    <string name="enable_gms_hint">تفعيل خدمات Google لتشغيل YouTube والتطبيقات الأخرى بشكل طبيعي</string>
     <string name="disable_gms">تعطيل الخدمة</string>
-    <string name="disable_gms_hint">مسح بيئة خدمات Google الحالية؟ سيتم مسح بيانات خدمات Google.</string>
-    <string name="no_gms">حالياً، لا توجد بيئة خدمات Google على الهاتف.</string>
+    <string name="disable_gms_hint">مسح بيئة خدمات Google الحالية؟</string>
+    <string name="no_gms">لا توجد بيئة خدمات Google على هذا الجهاز</string>
     <string name="language_setting">اللغة</string>
     <string name="language_setting_summary">تغيير لغة التطبيق</string>
-    <string name="theme_setting">الوضع الداكن</string>
-    <string name="theme_setting_summary">تبديل مظهر الوضع الداكن</string>
+    <string name="theme_setting">المظهر</string>
+    <string name="theme_setting_summary">اختر المظهر المفضل</string>
     <string name="about">حول</string>
-    <string name="about_summary">Blackbox Ultra - محرك افتراضي</string>
+    <string name="about_summary">بلاك بوكس برايم - محرك افتراضي متطور</string>
     <string name="version">الإصدار %s</string>
-    <string name="language_system">النظام الافتراضي</string>
+    <string name="language_system">إعدادات النظام</string>
     <string name="language_en">الإنجليزية</string>
     <string name="language_ar">العربية</string>
     <string name="language_es">الإسبانية</string>
     <string name="language_fr">الفرنسية</string>
     <string name="language_zh_cn">الصينية (المبسطة)</string>
     <string name="language_zh_tw">الصينية (التقليدية)</string>
-
-    <!-- Virtual Camera -->
+    <string name="nav_menu">القائمة</string>
+    <string name="tools_label">الأدوات</string>
+    <string name="settings_label">الإعدادات</string>
+    <string name="store_title">المتجر الداخلي</string>
+    <string name="store_search_hint">البحث في التطبيقات والإضافات...</string>
+    <string name="store_install">تثبيت</string>
+    <string name="store_installed">مثبت</string>
+    <string name="store_installing">جاري تثبيت %s...</string>
+    <string name="store_category_all">الكل</string>
+    <string name="store_category_games">ألعاب</string>
+    <string name="store_category_tools">أدوات</string>
+    <string name="store_category_social">تواصل اجتماعي</string>
+    <string name="quick_tools">أدوات سريعة</string>
+    <string name="tool_app_cloner">استنساخ التطبيقات</string>
+    <string name="tool_file_manager">مدير الملفات</string>
+    <string name="tool_short_clone">استنساخ</string>
+    <string name="tool_short_files">ملفات</string>
+    <string name="tool_short_boost">تعزيز</string>
+    <string name="tool_short_privacy">خصوصية</string>
+    <string name="tool_short_camera">كاميرا</string>
+    <string name="memory_booster">معزز الذاكرة</string>
+    <string name="memory_booster_started">تم مسح الذاكرة بنجاح</string>
+    <string name="privacy_guard">حارس الخصوصية</string>
+    <string name="privacy_guard_active">حارس الخصوصية نشط</string>
+    <string name="onboarding_title">مرحباً بك في بلاك بوكس برايم</string>
+    <string name="onboarding_subtitle">منصة البيئة الافتراضية المتميزة.\nاختر مظهرك ولغتك المفضلة للبدء.</string>
+    <string name="onboarding_select_theme">اختر مظهرك</string>
+    <string name="onboarding_select_language">اختر اللغة</string>
+    <string name="onboarding_get_started">ابدأ الآن</string>
+    <string name="onboarding_welcome">مرحباً بك!</string>
+    <string name="theme_cosmic">كوني</string>
+    <string name="theme_amoled">أسود AMOLED</string>
+    <string name="theme_neon">نيون</string>
+    <string name="theme_forest">غابة</string>
+    <string name="theme_ocean">محيط</string>
+    <string name="theme_sunset">غروب</string>
+    <string name="theme_picker">اختيار المظهر</string>
+    <string name="theme_restart">أعد تشغيل التطبيق لتطبيق المظهر</string>
     <string name="virtual_camera_title">الكاميرا الافتراضية</string>
     <string name="virtual_camera_mode">وضع الكاميرا</string>
     <string name="virtual_camera_off">إيقاف (استخدام الكاميرا الحقيقية)</string>
@@ -92,7 +128,7 @@
     <string name="virtual_camera_local_title">اختر فيديو</string>
     <string name="virtual_camera_no_video">لم يتم اختيار فيديو</string>
     <string name="virtual_camera_pick_video">اختر فيديو</string>
-    <string name="virtual_camera_network_title">البث عبر الشبكة</string>
+    <string name="virtual_camera_network_title">بث عبر الشبكة</string>
     <string name="virtual_camera_url_hint">رابط الفيديو (RTSP/HTTP)</string>
     <string name="virtual_camera_audio">الصوت</string>
     <string name="virtual_camera_saved">تم حفظ الإعدادات</string>
@@ -106,10 +142,15 @@
     <string name="virtual_camera_loop">تكرار الفيديو</string>
     <string name="virtual_camera_preview_size">حجم المعاينة</string>
     <string name="virtual_camera_resolution">الدقة</string>
-
-    <!-- Spoof Manager -->
+    <string name="filter_none">بدون</string>
+    <string name="filter_grayscale">تدرج رمادي</string>
+    <string name="filter_sepia">سيبيا</string>
+    <string name="filter_invert">عكس الألوان</string>
+    <string name="filter_brightness">سطوع</string>
+    <string name="filter_contrast">تباين</string>
+    <string name="filter_blur">ضبابية</string>
     <string name="spoof_manager_title">تزييف هوية الجهاز</string>
-    <string name="spoof_manager_summary">IMEI مخصص و Android ID و MAC و طراز الجهاز لكل تطبيق</string>
+    <string name="spoof_manager_summary">IMEI و Android ID و MAC وطراز الجهاز لكل تطبيق</string>
     <string name="spoof_enable_spoofing">تفعيل تزييف الهوية</string>
     <string name="spoof_identity">الهوية</string>
     <string name="spoof_device_info">معلومات الجهاز</string>
@@ -117,7 +158,7 @@
     <string name="spoof_android_id">Android ID</string>
     <string name="spoof_mac_address">عنوان MAC</string>
     <string name="spoof_serial_number">الرقم التسلسلي</string>
-    <string name="spoof_sim_serial">الرقم التسلسلي للشريحة</string>
+    <string name="spoof_sim_serial">رقم الشريحة التسلسلي</string>
     <string name="spoof_phone_number">رقم الهاتف</string>
     <string name="spoof_model">الطراز</string>
     <string name="spoof_manufacturer">الشركة المصنعة</string>
@@ -125,48 +166,38 @@
     <string name="spoof_device_name">الجهاز</string>
     <string name="spoof_fingerprint">البصمة</string>
     <string name="spoof_hardware">العتاد</string>
-    <string name="spoof_generate">إنشاء عشوائي</string>
+    <string name="spoof_generate">توليد عشوائي</string>
     <string name="spoof_save">حفظ الإعدادات</string>
     <string name="spoof_reset">إعادة تعيين</string>
     <string name="spoof_saved">تم حفظ الإعدادات</string>
     <string name="spoof_reset_done">تمت إعادة التعيين</string>
     <string name="spoof_no_package">لم يتم تحديد حزمة</string>
-    <string name="spoof_presets">الإعدادات المسبقة للجهاز</string>
+    <string name="spoof_presets">إعدادات الجهاز المسبقة</string>
     <string name="spoof_apply_preset">تطبيق الإعداد المسبق</string>
     <string name="spoof_preset_applied">تم تطبيق: %s</string>
     <string name="spoof_select_app">اختر تطبيقاً لتكوين التزييف</string>
-
-    <!-- Privacy Shield -->
     <string name="privacy_shield">درع الخصوصية</string>
     <string name="privacy_shield_active">درع الخصوصية نشط - حجب الكشف</string>
     <string name="privacy_shield_desc">تجاوز SafetyNet و Play Integrity وكشف البيئة الافتراضية</string>
-
-    <!-- Floating Overlay -->
-    <string name="overlay_start">تشغيل الطفو العائم</string>
-    <string name="overlay_stop">إيقاف الطفو العائم</string>
-    <string name="overlay_started">تم تشغيل الطفو العائم</string>
-    <string name="overlay_stopped">تم إيقاف الطفو العائم</string>
-
-    <!-- GMS Enhanced -->
+    <string name="overlay_start">تشغيل الطبقة العائمة</string>
+    <string name="overlay_stop">إيقاف الطبقة العائمة</string>
+    <string name="overlay_started">تم تشغيل الطبقة العائمة</string>
+    <string name="overlay_stopped">تم إيقاف الطبقة العائمة</string>
     <string name="gms_install_play_store">تثبيت متجر Play</string>
-    <string name="gms_install_play_store_hint">تثبيت متجر Google Play لتنزيل التطبيقات داخل المساحة الافتراضية.</string>
+    <string name="gms_install_play_store_hint">تثبيت متجر Google Play لتنزيل التطبيقات داخل المساحة الافتراضية</string>
     <string name="gms_play_store_installed">تم تثبيت متجر Play</string>
     <string name="gms_play_store_removed">تم إزالة متجر Play</string>
     <string name="gms_status_installed">مثبت</string>
     <string name="gms_status_not_installed">غير مثبت</string>
-
-    <!-- Navigation -->
     <string name="nav_spoof_manager">تزييف الجهاز</string>
     <string name="nav_privacy_shield">درع الخصوصية</string>
-    <string name="nav_floating_overlay">الطفو العائم</string>
-
-    <!-- App Management -->
+    <string name="nav_floating_overlay">الطبقة العائمة</string>
     <string name="kill_all_apps">إيقاف جميع التطبيقات</string>
     <string name="kill_all_apps_hint">هل تريد إيقاف جميع التطبيقات الافتراضية العاملة؟</string>
     <string name="kill_all_apps_done">تم إيقاف جميع التطبيقات</string>
     <string name="welcome_tagline">محرك افتراضي \u00B7 خصوصية \u00B7 حرية</string>
-    <string name="search_apps">بحث في التطبيقات...</string>
-    <string name="no_apps_installed">لا توجد تطبيقات مثبتة.\nاضغط + لإضافة تطبيق.</string>
+    <string name="search_apps">البحث في التطبيقات...</string>
+    <string name="no_apps_installed">لا توجد تطبيقات مثبتة بعد.\nاضغط + لإضافة تطبيق.</string>
     <string name="drag_to_reorder">اسحب لإعادة الترتيب</string>
     <string name="app_running">يعمل</string>
 </resources>

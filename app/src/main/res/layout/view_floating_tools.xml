@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/quick_tools"
-        android:textColor="@color/white"
+        android:textColor="@color/accent"
         android:textSize="13sp"
         android:textStyle="bold"
         android:layout_marginBottom="8dp"
@@ -26,10 +26,10 @@
             android:id="@+id/btn_app_cloner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
-            android:padding="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless">
+            android:orientation="vertical"
+            android:padding="8dp">
 
             <ImageView
                 android:layout_width="32dp"
@@ -50,10 +50,10 @@
             android:id="@+id/btn_virtual_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
-            android:padding="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless">
+            android:orientation="vertical"
+            android:padding="8dp">
 
             <ImageView
                 android:layout_width="32dp"
@@ -74,10 +74,10 @@
             android:id="@+id/btn_file_manager"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
-            android:padding="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless">
+            android:orientation="vertical"
+            android:padding="8dp">
 
             <ImageView
                 android:layout_width="32dp"
@@ -98,10 +98,10 @@
             android:id="@+id/btn_memory_booster"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
-            android:padding="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless">
+            android:orientation="vertical"
+            android:padding="8dp">
 
             <ImageView
                 android:layout_width="32dp"
@@ -122,10 +122,10 @@
             android:id="@+id/btn_privacy_guard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:background="?attr/selectableItemBackgroundBorderless"
             android:gravity="center"
-            android:padding="8dp"
-            android:background="?attr/selectableItemBackgroundBorderless">
+            android:orientation="vertical"
+            android:padding="8dp">
 
             <ImageView
                 android:layout_width="32dp"

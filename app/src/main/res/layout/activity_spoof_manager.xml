@@ -4,16 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="?android:attr/colorBackground">
+    android:background="@color/background">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/toolbar_bg"
         app:title="@string/spoof_manager_title"
-        app:titleTextColor="@android:color/white"
-        app:navigationIconTint="@android:color/white" />
+        app:titleTextColor="@color/accent"
+        app:navigationIconTint="@color/white" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -30,21 +30,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                style="@style/CardView.Cyberpunk">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center_vertical">
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/spoof_enable_spoofing"
+                        android:textColor="@color/primary_text"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -61,8 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                style="@style/CardView.Cyberpunk">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -74,6 +73,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/spoof_identity"
+                        android:textColor="@color/accent"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="12dp" />
@@ -84,12 +84,14 @@
                         android:layout_marginBottom="8dp"
                         android:hint="@string/spoof_imei"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etImei"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="number"
-                            android:maxLength="15" />
+                            android:maxLength="15"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.button.MaterialButton
@@ -97,8 +99,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/spoof_generate"
+                        android:layout_gravity="end"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_gravity="end" />
+                        android:textColor="@color/accent" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -106,12 +109,14 @@
                         android:layout_marginBottom="8dp"
                         android:hint="@string/spoof_android_id"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etAndroidId"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textCapCharacters"
-                            android:maxLength="16" />
+                            android:maxLength="16"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.button.MaterialButton
@@ -119,8 +124,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/spoof_generate"
+                        android:layout_gravity="end"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_gravity="end" />
+                        android:textColor="@color/accent" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -128,12 +134,14 @@
                         android:layout_marginBottom="8dp"
                         android:hint="@string/spoof_mac_address"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etMac"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="text"
-                            android:maxLength="17" />
+                            android:maxLength="17"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.button.MaterialButton
@@ -141,8 +149,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/spoof_generate"
+                        android:layout_gravity="end"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_gravity="end" />
+                        android:textColor="@color/accent" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
@@ -150,11 +159,13 @@
                         android:layout_marginBottom="8dp"
                         android:hint="@string/spoof_serial_number"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etSerial"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -163,11 +174,13 @@
                         android:layout_marginBottom="8dp"
                         android:hint="@string/spoof_sim_serial"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etSimSerial"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -175,11 +188,13 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/spoof_phone_number"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etPhoneNumber"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="phone" />
+                            android:inputType="phone"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
@@ -190,8 +205,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                style="@style/CardView.Cyberpunk">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -203,6 +217,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/spoof_device_info"
+                        android:textColor="@color/accent"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="12dp" />
@@ -213,11 +228,13 @@
                         android:layout_marginBottom="8dp"
                         android:hint="@string/spoof_model"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etModel"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -226,11 +243,13 @@
                         android:layout_marginBottom="8dp"
                         android:hint="@string/spoof_manufacturer"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etManufacturer"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -239,11 +258,13 @@
                         android:layout_marginBottom="8dp"
                         android:hint="@string/spoof_brand"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etBrand"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -252,11 +273,13 @@
                         android:layout_marginBottom="8dp"
                         android:hint="@string/spoof_device_name"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etDevice"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -265,11 +288,13 @@
                         android:layout_marginBottom="8dp"
                         android:hint="@string/spoof_fingerprint"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etFingerprint"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -277,11 +302,13 @@
                         android:layout_height="wrap_content"
                         android:hint="@string/spoof_hardware"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/etHardware"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="text" />
+                            android:inputType="text"
+                            android:textColor="@color/primary_text" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
@@ -292,8 +319,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                style="@style/CardView.Cyberpunk">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -305,6 +331,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/spoof_presets"
+                        android:textColor="@color/accent"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="12dp" />
@@ -313,16 +340,18 @@
                         android:id="@+id/spinnerPresets"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
-                        android:background="@android:drawable/btn_dropdown" />
+                        android:background="@drawable/spinner_bg" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnApplyPreset"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/spoof_apply_preset"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                         android:layout_gravity="end"
-                        android:layout_marginTop="8dp" />
+                        android:layout_marginTop="8dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        app:strokeColor="@color/accent"
+                        android:textColor="@color/accent" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -332,15 +361,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/spoof_save"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"
+                app:backgroundTint="@color/accent"
+                android:textColor="@color/black" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnReset"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/spoof_reset"
+                android:layout_marginBottom="8dp"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_marginBottom="8dp" />
+                app:strokeColor="@color/error"
+                android:textColor="@color/error" />
 
         </LinearLayout>
     </ScrollView>

@@ -61,6 +61,11 @@
             android:title="@string/about_summary"
             android:summary="@string/version" />
 
+        <Preference
+            android:key="telegram"
+            android:title="@string/tg_group"
+            android:summary="https://t.me/mohammedtahriyne" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

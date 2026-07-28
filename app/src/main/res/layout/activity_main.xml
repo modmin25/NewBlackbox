@@ -46,7 +46,9 @@
                 app:dotsSize="8dp"
                 app:dotsSpacing="4dp"
                 app:dotsWidthFactor="2.5"
-                app:progressMode="true" />
+                app:progressMode="true"
+                app:dotsColor="@color/accent"
+                app:progressModeColor="@color/accent_pink" />
 
         </LinearLayout>
 
@@ -59,7 +61,8 @@
             android:layout_marginBottom="16dp"
             android:src="@drawable/ic_add"
             app:backgroundTint="@color/accent"
-            app:tint="@color/white" />
+            app:tint="@color/black"
+            app:rippleColor="@color/ripple_color" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_camera"
@@ -70,9 +73,10 @@
             android:layout_marginBottom="88dp"
             android:src="@drawable/ic_nav_camera"
             android:contentDescription="@string/virtual_camera_title"
-            app:backgroundTint="@color/primary"
+            app:backgroundTint="@color/accent_pink"
             app:fabSize="mini"
-            app:tint="@color/white" />
+            app:tint="@color/white"
+            app:rippleColor="@color/ripple_color" />
 
     </FrameLayout>
 
@@ -85,6 +89,7 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
         app:itemIconTint="@color/secondary_text"
-        app:itemTextColor="@color/primary_text" />
+        app:itemTextColor="@color/primary_text"
+        app:itemBackground="@android:color/transparent" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

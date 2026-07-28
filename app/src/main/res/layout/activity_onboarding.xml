@@ -1,144 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="24dp"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:padding="24dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@mipmap/ic_launcher_round"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginBottom="16dp"
-                android:contentDescription="@string/app_name" />
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_launcher_round" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="@string/onboarding_title"
-                android:textColor="@color/primary_text"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                android:textColor="@color/accent"
+                android:textSize="28sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
                 android:text="@string/onboarding_subtitle"
                 android:textColor="@color/secondary_text"
-                android:textSize="14sp"
-                android:gravity="center"
-                android:layout_marginBottom="32dp" />
+                android:textSize="14sp" />
 
-            <TextView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/onboarding_select_theme"
-                android:textColor="@color/primary_text"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="12dp" />
+                android:layout_marginBottom="16dp"
+                style="@style/CardView.Cyberpunk">
 
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/theme_chip_group"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="@string/onboarding_select_theme"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/theme_chip_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/theme_cosmic"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/theme_cosmic"
+                            android:textColor="@color/primary_text"
+                            app:chipBackgroundColor="@color/surface_variant"
+                            app:chipStrokeColor="@color/accent"
+                            app:checkedChipColor="@color/accent" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/theme_amoled"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/theme_amoled"
+                            android:textColor="@color/primary_text"
+                            app:chipBackgroundColor="@color/surface_variant"
+                            app:chipStrokeColor="@color/accent"
+                            app:checkedChipColor="@color/accent" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/theme_neon"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/theme_neon"
+                            android:textColor="@color/primary_text"
+                            app:chipBackgroundColor="@color/surface_variant"
+                            app:chipStrokeColor="@color/accent"
+                            app:checkedChipColor="@color/accent" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/theme_forest"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/theme_forest"
+                            android:textColor="@color/primary_text"
+                            app:chipBackgroundColor="@color/surface_variant"
+                            app:chipStrokeColor="@color/accent"
+                            app:checkedChipColor="@color/accent" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/theme_ocean"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/theme_ocean"
+                            android:textColor="@color/primary_text"
+                            app:chipBackgroundColor="@color/surface_variant"
+                            app:chipStrokeColor="@color/accent"
+                            app:checkedChipColor="@color/accent" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/theme_sunset"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/theme_sunset"
+                            android:textColor="@color/primary_text"
+                            app:chipBackgroundColor="@color/surface_variant"
+                            app:chipStrokeColor="@color/accent"
+                            app:checkedChipColor="@color/accent" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:singleSelection="true"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
+                android:layout_marginBottom="16dp"
+                style="@style/CardView.Cyberpunk">
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/theme_cosmic"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/theme_cosmic"
-                    android:checked="true"
-                    app:chipBackgroundColor="@color/surface"
-                    android:textColor="@color/primary_text" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/theme_amoled"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/theme_amoled"
-                    app:chipBackgroundColor="@color/surface"
-                    android:textColor="@color/primary_text" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="@string/onboarding_select_language"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/theme_neon"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/theme_neon"
-                    app:chipBackgroundColor="@color/surface"
-                    android:textColor="@color/primary_text" />
+                    <Spinner
+                        android:id="@+id/language_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/spinner_bg"
+                        android:paddingHorizontal="12dp" />
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/theme_forest"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/theme_forest"
-                    app:chipBackgroundColor="@color/surface"
-                    android:textColor="@color/primary_text" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/theme_ocean"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/theme_ocean"
-                    app:chipBackgroundColor="@color/surface"
-                    android:textColor="@color/primary_text" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/theme_sunset"
-                    style="@style/Widget.MaterialComponents.Chip.Choice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/theme_sunset"
-                    app:chipBackgroundColor="@color/surface"
-                    android:textColor="@color/primary_text" />
-
-            </com.google.android.material.chip.ChipGroup>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/onboarding_select_language"
-                android:textColor="@color/primary_text"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="12dp" />
-
-            <Spinner
-                android:id="@+id/language_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@drawable/spinner_bg"
-                android:paddingHorizontal="12dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_get_started"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="52dp"
         android:layout_margin="24dp"
@@ -146,6 +188,6 @@
         android:textSize="16sp"
         app:backgroundTint="@color/accent"
         app:cornerRadius="12dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto" />
+        android:textColor="@color/black" />
 
 </LinearLayout>

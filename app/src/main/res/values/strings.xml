@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Blackbox Ultra</string>
+    <string name="app_name">Blackbox Prime</string>
     <string name="choose">Choose</string>
     <string name="choose_app">Choose App</string>
     <string name="installed_app">Installed Apps</string>
@@ -9,7 +9,7 @@
     <string name="filter">Filter</string>
     <string name="open_source_path">Open Source</string>
     <string name="xp_setting">Xposed Setting</string>
-    <string name="tg_group">Telegram Group</string>
+    <string name="tg_group">Telegram Channel</string>
     <string name="fake_location">Fake Location</string>
     <string name="real_location">Real Location</string>
     <string name="set_location">Set Fake Location Successfully:%1$s-%2$s</string>
@@ -37,7 +37,7 @@
     <string name="app_shortcut">Create Shortcut</string>
     <string name="shortcut_name">Shortcut Name</string>
     <string name="try_add_shortcut">Try Added To Desktop</string>
-    <string name="add_shortcut_fail_msg">If the addition fails, please go to system settings and open the permission of "create desktop shortcut" for BlackBox Pro</string>
+    <string name="add_shortcut_fail_msg">If the addition fails, please go to system settings and open the permission of "create desktop shortcut" for Blackbox Prime</string>
     <string name="install_success">Installed Successfully</string>
     <string name="install_fail">Installed Failed: %s</string>
     <string name="install_fail_no_msg">Installed Failed</string>
@@ -72,7 +72,7 @@
     <string name="theme_setting">Theme</string>
     <string name="theme_setting_summary">Select your preferred theme</string>
     <string name="about">About</string>
-    <string name="about_summary">Blackbox Ultra - Virtual Engine</string>
+    <string name="about_summary">Blackbox Prime - Virtual Engine</string>
     <string name="version">Version %s</string>
     <string name="language_system">System Default</string>
     <string name="language_en">English</string>
@@ -115,7 +115,7 @@
     <string name="privacy_guard_active">Privacy Guard enabled</string>
 
     <!-- Onboarding -->
-    <string name="onboarding_title">Welcome to BlackBox Pro</string>
+    <string name="onboarding_title">Welcome to Blackbox Prime</string>
     <string name="onboarding_subtitle">Your premium virtual environment platform.\nChoose your preferred theme and language to get started.</string>
     <string name="onboarding_select_theme">Choose Your Theme</string>
     <string name="onboarding_select_language">Choose Language</string>

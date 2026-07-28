@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Blackbox Ultra</string>
+    <string name="app_name">Blackbox Prime</string>
     <string name="choose">Choisir</string>
     <string name="choose_app">Choisir une App</string>
     <string name="installed_app">Apps Installées</string>
@@ -37,7 +37,7 @@
     <string name="app_shortcut">Créer un Raccourci</string>
     <string name="shortcut_name">Nom du Raccourci</string>
     <string name="try_add_shortcut">Tentative d\'ajout au Bureau</string>
-    <string name="add_shortcut_fail_msg">Si l\'ajout échoue, allez dans les paramètres système et activez la permission \"créer un raccourci bureau\" pour Blackbox Ultra</string>
+    <string name="add_shortcut_fail_msg">Si l\'ajout échoue, allez dans les paramètres système et activez la permission \"créer un raccourci bureau\" pour Blackbox Prime</string>
     <string name="install_success">Installé avec Succès</string>
     <string name="install_fail">Échec de l\'Installation: %s</string>
     <string name="install_fail_no_msg">Échec de l\'Installation</string>
@@ -72,7 +72,7 @@
     <string name="theme_setting">Mode Sombre</string>
     <string name="theme_setting_summary">Basculer l\'apparence en mode sombre</string>
     <string name="about">À propos</string>
-    <string name="about_summary">Blackbox Ultra - Moteur Virtuel</string>
+    <string name="about_summary">Blackbox Prime - Moteur Virtuel</string>
     <string name="version">Version %s</string>
     <string name="language_system">Par Défaut du Système</string>
     <string name="language_en">Anglais</string>

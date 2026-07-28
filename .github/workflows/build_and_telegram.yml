@@ -1,4 +1,4 @@
-name: Build and Send APK to Telegram
+name: Build Blackbox Prime and Send to Telegram
 
 on:
   push:
@@ -164,4 +164,3 @@ jobs:
               fi
             fi
           done
-

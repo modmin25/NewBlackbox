@@ -28,7 +28,7 @@
         app:showAsAction="never" />
 
     <item
-            android:id="@+id/main_git"
+            android:id="@+id/main_github"
             android:title="@string/open_source_path"
             app:showAsAction="never" />
 

@@ -1,7 +1,8 @@
 package top.niunaijun.blackboxa.view.setting
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -52,6 +53,8 @@ class SettingFragment : PreferenceFragmentCompat() {
         }
 
         initSendLogs()
+        initTelegram()
+        initAbout()
     }
 
     private fun initLanguage() {
@@ -140,6 +143,30 @@ class SettingFragment : PreferenceFragmentCompat() {
                 )
             toast("Sending logs... (Check notifications for status)")
             true
+        }
+    }
+
+    private fun initTelegram() {
+        val telegramPreference: Preference? = findPreference("telegram")
+        telegramPreference?.setOnPreferenceClickListener {
+            try {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/mohammedtahriyne"))
+                startActivity(intent)
+            } catch (e: Exception) {
+                toast("Could not open Telegram link")
+            }
+            true
+        }
+    }
+
+    private fun initAbout() {
+        val aboutPreference: Preference? = findPreference("about")
+        aboutPreference?.let {
+            it.summary = "Version 11.0.0 Mastermind Edition"
+            it.setOnPreferenceClickListener {
+                toast("Blackbox Prime v11.0.0")
+                true
+            }
         }
     }
 }

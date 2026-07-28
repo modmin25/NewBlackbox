@@ -23,7 +23,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BlackBoxPro"
+rootProject.name = "BlackboxPrime"
 
 include ':app'
 include(":black-reflection")

@@ -149,7 +149,7 @@ class MainActivity : LoadingActivity() {
         val headerView = navView.getHeaderView(0)
         headerView?.let {
             it.findViewById<TextView>(R.id.nav_header_title)?.text = getString(R.string.app_name)
-            it.findViewById<TextView>(R.id.nav_header_subtitle)?.text = getString(R.string.version, "10.0.0")
+            it.findViewById<TextView>(R.id.nav_header_subtitle)?.text = getString(R.string.version, "11.0.0")
         }
     }
 
@@ -507,7 +507,7 @@ class MainActivity : LoadingActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         try {
             when (item.itemId) {
-                R.id.main_git -> {
+                R.id.main_github -> {
                     val intent = Intent(
                         Intent.ACTION_VIEW,
                         Uri.parse("https://github.com/modmin25/NewBlackbox")
@@ -519,6 +519,10 @@ class MainActivity : LoadingActivity() {
                 }
                 R.id.main_tg -> {
                     val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/mohammedtahriyne"))
+                    startActivity(intent)
+                }
+                R.id.main_github -> {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/modmin25/BlackboxPrime"))
                     startActivity(intent)
                 }
                 R.id.fake_location -> {

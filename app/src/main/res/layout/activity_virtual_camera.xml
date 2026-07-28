@@ -4,16 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="?android:attr/colorBackground">
+    android:background="@color/background">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/toolbar_bg"
         app:title="@string/virtual_camera_title"
-        app:titleTextColor="@android:color/white"
-        app:navigationIconTint="@android:color/white" />
+        app:titleTextColor="@color/accent"
+        app:navigationIconTint="@color/white" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,8 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                style="@style/CardView.Cyberpunk">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -42,6 +41,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/virtual_camera_mode"
+                        android:textColor="@color/accent"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="12dp" />
@@ -56,6 +56,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/virtual_camera_off"
+                            android:textColor="@color/primary_text"
                             android:padding="8dp" />
 
                         <RadioButton
@@ -63,6 +64,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/virtual_camera_disable"
+                            android:textColor="@color/primary_text"
                             android:padding="8dp" />
 
                         <RadioButton
@@ -70,6 +72,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/virtual_camera_local"
+                            android:textColor="@color/primary_text"
                             android:padding="8dp" />
 
                         <RadioButton
@@ -77,6 +80,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/virtual_camera_network"
+                            android:textColor="@color/primary_text"
                             android:padding="8dp" />
 
                     </RadioGroup>
@@ -90,8 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:visibility="gone"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                style="@style/CardView.Cyberpunk">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -103,6 +106,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/virtual_camera_local_title"
+                        android:textColor="@color/accent"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="8dp" />
@@ -112,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/virtual_camera_no_video"
-                        android:textColor="?android:attr/textColorSecondary"
+                        android:textColor="@color/secondary_text"
                         android:layout_marginBottom="12dp" />
 
                     <com.google.android.material.button.MaterialButton
@@ -120,7 +124,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/virtual_camera_pick_video"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        app:strokeColor="@color/accent"
+                        android:textColor="@color/accent" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -131,8 +137,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:visibility="gone"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                style="@style/CardView.Cyberpunk">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -144,6 +149,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/virtual_camera_network_title"
+                        android:textColor="@color/accent"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="8dp" />
@@ -159,7 +165,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textUri"
-                            android:singleLine="true" />
+                            android:singleLine="true"
+                            android:textColor="@color/primary_text" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -172,21 +179,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:visibility="gone"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                style="@style/CardView.Cyberpunk">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center_vertical">
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/virtual_camera_audio"
+                        android:textColor="@color/primary_text"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -204,21 +211,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:visibility="gone"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                style="@style/CardView.Cyberpunk">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp"
-                    android:gravity="center_vertical">
+                    android:padding="16dp">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/virtual_camera_loop"
+                        android:textColor="@color/primary_text"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -237,8 +244,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:visibility="gone"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp">
+                style="@style/CardView.Cyberpunk">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -250,6 +256,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/virtual_camera_filters"
+                        android:textColor="@color/accent"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="8dp" />
@@ -258,7 +265,99 @@
                         android:id="@+id/spinnerFilter"
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
-                        android:background="@android:drawable/btn_dropdown" />
+                        android:background="@drawable/spinner_bg" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBinderHook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                style="@style/CardView.Cyberpunk">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Binder Hook"
+                            android:textColor="@color/primary_text"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Intercept Camera1/Camera2 at Binder level"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchBinderHook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardAvSync"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                style="@style/CardView.Cyberpunk">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AV Sync"
+                            android:textColor="@color/primary_text"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Synchronize audio and video streams"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchAvSync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -268,16 +367,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/done"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="8dp"
+                app:backgroundTint="@color/accent"
+                android:textColor="@color/black" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnStatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/virtual_camera_status_off"
                 android:enabled="false"
+                android:text="@string/virtual_camera_status_off"
+                android:layout_marginTop="8dp"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_marginTop="8dp" />
+                android:textColor="@color/secondary_text" />
 
         </LinearLayout>
     </ScrollView>
